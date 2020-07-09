@@ -21,17 +21,14 @@ const BlogIndex = ({ data, location }) => {
         return (
           <article key={node.fields.slug}>            
             <header>
-              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>                                
-                {isVideo &&                 
-                  <video poster={node.frontmatter.hero.publicURL} autoPlay loop width="600" height="400">
-                    <source src={node.frontmatter.hero_video.publicURL} type="video/mp4"/>
-                  </video>                              
-                }
-                {!isVideo &&
-                  <img width="600" src={node.frontmatter.hero.publicURL}  alt="" loading="lazy" />  
-                } 
-              </Link>                                
-            </header>            
+              {node.frontmatter.title}                              
+            </header>      
+            <section dangerouslySetInnerHTML={{ __html: node.html }} />
+            <hr
+              style={{
+                marginBottom: rhythm(1),
+              }}
+            />      
           </article>
         )
       })}
@@ -42,31 +39,26 @@ const BlogIndex = ({ data, location }) => {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query BlogList {
+  query RTAList {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(filter: {frontmatter: {section: {eq: "home"}}}, sort: {fields: frontmatter___priority, order: ASC}) {
+    allMarkdownRemark(filter: {frontmatter: {section: {eq: "rta-journal"}}}, sort: {fields: frontmatter___priority, order: ASC}) {
       edges {
         node {
           frontmatter {
             title
             description
-            date(formatString: "MMMM DD, YYYY")
-            hero_video {
-              publicURL
-            }
-            hero {
-              publicURL
-            }
+            date(formatString: "MMMM DD, YYYY")            
             priority
           }
           fields {
             slug
           }
           id
+          html
         }
       }
     }

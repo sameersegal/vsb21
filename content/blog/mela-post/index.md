@@ -3,6 +3,7 @@ title: Mela Post
 date: "2020-07-28T22:40:32.169Z"
 description: "An interesting post from the teachers"
 hero: ./7.jpg
+section: 'home'
 priority: 12
 ---
 
