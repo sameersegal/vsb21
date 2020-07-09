@@ -1,9 +1,10 @@
 ---
-title: RTA Journal
+title: Sports Day
 date: "2020-07-01T22:12:03.284Z"
 description: "My first video post"
 hero: "./1.png"
-priority: 10
+section: 'rta-journal'
+priority: 80
 ---
 
 ![1](./1.png)
