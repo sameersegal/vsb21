@@ -1,13 +1,23 @@
 ---
 title: My Second Post!
 date: "2015-05-06T23:46:37.121Z"
+hero: "./0.jpg"
+priority: 50
 ---
 
-Wow! I love blogging so much already.
-
-Did you know that "despite its name, salted duck eggs can also be made from
-chicken eggs, though the taste and texture will be somewhat different, and the
-egg yolk will be less rich."?
-([Wikipedia Link](https://en.wikipedia.org/wiki/Salted_duck_egg))
-
-Yeah, I didn't either.
+![Chinese Salty Egg](./1.png)
+![Chinese Salty Egg](./2.png)
+![Chinese Salty Egg](./3.png)
+![Chinese Salty Egg](./4.png)
+![Chinese Salty Egg](./5.png)
+![Chinese Salty Egg](./6.png)
+![Chinese Salty Egg](./7.png)
+![Chinese Salty Egg](./8.png)
+![Chinese Salty Egg](./9.png)
+![Chinese Salty Egg](./10.png)
+![Chinese Salty Egg](./11.png)
+![Chinese Salty Egg](./12.png)
+![Chinese Salty Egg](./13.png)
+![Chinese Salty Egg](./14.png)
+![Chinese Salty Egg](./15.png)
+![Chinese Salty Egg](./16.png)

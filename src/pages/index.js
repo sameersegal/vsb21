@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Image from "gatsby-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -16,27 +17,21 @@ const BlogIndex = ({ data, location }) => {
       <Bio />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
+        const isVideo = !!node.frontmatter.hero_video
         return (
-          <article key={node.fields.slug}>
+          <article key={node.fields.slug}>            
             <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
+              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>                                
+                {isVideo &&                 
+                  <video poster={node.frontmatter.hero.publicURL} autoPlay loop width="600" height="400">
+                    <source src={node.frontmatter.hero_video.publicURL} type="video/mp4"/>
+                  </video>                              
+                }
+                {!isVideo &&
+                  <img width="600" src={node.frontmatter.hero.publicURL}  alt="" loading="lazy" />  
+                } 
+              </Link>                                
+            </header>            
           </article>
         )
       })}
@@ -47,24 +42,31 @@ const BlogIndex = ({ data, location }) => {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query {
+  query BlogList {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: {order: ASC, fields: frontmatter___priority}) {
       edges {
         node {
-          excerpt
+          frontmatter {
+            title
+            description
+            date(formatString: "MMMM DD, YYYY")
+            hero_video {
+              publicURL
+            }
+            hero {
+              publicURL
+            }
+            priority
+          }
           fields {
             slug
           }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
+          id
         }
       }
     }
