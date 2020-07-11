@@ -17,5 +17,6 @@ With the school being a little over 40 years old, surely it is time that each on
 * How do I make sure that my connection to this place remains alive and active so that I look beyond what it had been in the past?
 * Even when we go on doing the same thing every year is it necessary that it becomes mechanical? 
 
-The circumstances this year have forced us to see things differently, we should be careful not to lose this ability to see things differently. 
+The circumstances this year have forced us to see things differently, we should be careful not to lose this ability to see things differently.
+ 
 Happy birthday to all of us! 
