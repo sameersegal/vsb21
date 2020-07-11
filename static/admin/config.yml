@@ -16,14 +16,44 @@ public_folder: /media
 
 collections:
   - name: "posts"
-    label: "Posts"
+    label: "Home Page"
     folder: "content/blog"
     create: true
     delete: true
     path: "{{slug}}/index"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    media_folder: "images"
-    public_folder: "./images"
+    media_folder: "./"
+    public_folder: "./"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }      
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
+      - { label: "Excerpt", name: "description", widget: "string", required: false }    
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "rta-journal"
+    label: "RTA Journal"
+    folder: "content/blog/rta-journal"
+    create: true
+    delete: true
+    path: "{{slug}}/index"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: "./"
+    public_folder: "./"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }      
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
+      - { label: "Excerpt", name: "description", widget: "string", required: false }    
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "musings-and-memories"
+    label: "Musings and Memories"
+    folder: "content/blog/musings-and-memories"
+    create: true
+    delete: true
+    path: "{{slug}}/index"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: "./"
+    public_folder: "./"
     fields:
       - { label: "Title", name: "title", widget: "string" }      
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }

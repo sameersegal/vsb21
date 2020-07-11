@@ -15,9 +15,9 @@ const ImageQuote2 = ({title, image, col1, col2, author, date}) => {
                 <div style={{
                         flexGrow: 2
                     }}>
-                    {col1.map((row)=>{
+                    {col1.map((row, i)=>{
                         return (
-                            <span>
+                            <span key={i}>
                                 {row}
                                 <br/>
                             </span>
@@ -27,9 +27,9 @@ const ImageQuote2 = ({title, image, col1, col2, author, date}) => {
                 <div style={{
                         flexGrow: 2
                     }}>
-                    {col2.map((row)=>{
+                    {col2.map((row, i)=>{
                         return (
-                            <span>
+                            <span key={i}>
                                 {row}
                                 <br/>
                             </span>
