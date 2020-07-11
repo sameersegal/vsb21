@@ -10,7 +10,7 @@ exports.createPages = async ({ graphql, actions }) => {
       {
         allMarkdownRemark(
           filter: {frontmatter: {section: {eq: "home"}}}
-          sort: { fields: [frontmatter___priority], order: ASC }
+          sort: { fields: [frontmatter___priority], order: DESC }
           limit: 1000
         ) {
           edges {
@@ -38,16 +38,20 @@ exports.createPages = async ({ graphql, actions }) => {
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
+    const slug = post.node.fields.slug
 
-    createPage({
-      path: post.node.fields.slug,
-      component: blogPost,
-      context: {
-        slug: post.node.fields.slug,
-        previous,
-        next,
-      },
-    })
+    // these are custom pages that we don't want overriden
+    if (slug.indexOf(['/rta-journal','/musings-and-memories']) == -1) {
+      createPage({
+        path: slug,
+        component: blogPost,
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    }    
   })
 }
 
@@ -55,7 +59,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const value = createFilePath({ node, getNode })    
+
     createNodeField({
       name: `slug`,
       node,

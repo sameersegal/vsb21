@@ -2,14 +2,13 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Image from "gatsby-image"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
-const BlogIndex = ({ data, location }) => {
+const RTAIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+  const posts = data.allMarkdownRemark.edges  
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -17,11 +16,12 @@ const BlogIndex = ({ data, location }) => {
       <Bio />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
-        const isVideo = !!node.frontmatter.hero_video
+        const isVideo = !!node.frontmatter.hero_video        
+        const tag = "#" + node.fields.slug.substr(1).toLocaleLowerCase()
         return (
           <article key={node.fields.slug}>            
             <header>
-              {node.frontmatter.title}                              
+              <a href={{tag}}>{node.frontmatter.title}</a>
             </header>      
             <section dangerouslySetInnerHTML={{ __html: node.html }} />
             <hr
@@ -36,7 +36,7 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
+export default RTAIndex
 
 export const pageQuery = graphql`
   query RTAList {

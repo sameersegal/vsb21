@@ -1,14 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Valley School Birthday Souvenir`,
-    author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
-    },
+    title: `Glimpses of the Valley`,    
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    siteUrl: `https://vsb-simple.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `thevalleyschool`,
     },
   },
   plugins: [
