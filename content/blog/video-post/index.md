@@ -6,7 +6,7 @@ type: video
 hero: "./video-one.jpg"
 hero_video: "./video-one.mp4"
 section: 'home'
-priority: 10
+priority: 50
 ---
 
 <video poster="./video-one.jpg" autoplay loop width="600" height="400">

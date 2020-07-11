@@ -4,7 +4,7 @@ date: "2020-07-01T22:12:03.284Z"
 description: "RTA Journal intro"
 hero: "./images/1.png"
 section: 'home'
-priority: 10
+priority: 60
 ---
 
 ![1](./1.png)

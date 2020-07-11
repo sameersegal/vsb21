@@ -4,7 +4,7 @@ date: "2004-07-17T22:40:32.169Z"
 description: "A letter to Valley on it's birthday"
 hero: ./1.jpg
 section: 'home'
-priority: 12
+priority: 1
 type: 'image_3_col'
 col1:
     - Do you know it's your birthday!
