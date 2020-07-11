@@ -28,11 +28,6 @@ collections:
       - { label: "Title", name: "title", widget: "string" }      
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
       - { label: "Excerpt", name: "description", widget: "string", required: false }    
-      - { label: "Image", name: "hero", widget: "image", required: false}
-      - { label: "Video", name: "hero_video", widget: "file", required: false}
-      - { label: "Section", name: "section", widget: "hidden", default: "home", required: true}
-      - { label: "Priority", name: "priority", widget: "number", valueType: "int", required: true}
-      - { label: "Author", name: "author", widget: "string", required: true}
       - label: "Type"
         name: "type"
         widget: "select"
@@ -42,8 +37,13 @@ collections:
           - { label: "Video", value: "video"}
           - { label: "normal", value: "normal"}
         required: true
-      - { label: "Col1", name: "col1", widget: "list", required: false}        
-      - { label: "Col2", name: "col2", widget: "list", required: false}        
+      - { label: "Image", name: "hero", widget: "image", required: false}
+      - { label: "Video", name: "hero_video", widget: "file", required: false, hint: "Only required if type is video"}
+      - { label: "Section", name: "section", widget: "hidden", default: "home", required: true}
+      - { label: "Priority", name: "priority", widget: "number", valueType: "int", required: true, hint: "Decides the order of the posts. The lower the value, the earlier the post appears on the home page"}
+      - { label: "Author", name: "author", widget: "string", required: true}      
+      - { label: "Col1", name: "col1", widget: "list", required: false, minimize_collapsed: true, hint: "Only required if Image Quote 3 Col is selected"}        
+      - { label: "Col2", name: "col2", widget: "list", required: false, minimize_collapsed: true, hint: "Only required if Image Quote 3 Col is selected"}        
       - { label: "Body", name: "body", widget: "markdown", required: false}
     sortableFields: ["priority","commit_date","date"]
        
