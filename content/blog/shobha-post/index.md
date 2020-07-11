@@ -1,7 +1,7 @@
 ---
-title: Dear Valley
+title: Shobha Aunty's Post
 date: "2004-07-17T22:40:32.169Z"
-description: "A letter to Valley on it's birthday"
+description: "A note from Shobha Aunty"
 hero: ./1.jpg
 section: 'home'
 priority: 30

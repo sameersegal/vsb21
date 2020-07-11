@@ -1,7 +1,7 @@
 ---
-title: Dear Valley
+title: Jazz's Note
 date: "2004-07-17T22:40:32.169Z"
-description: "A letter to Valley on it's birthday"
+description: "A note from Jazz"
 hero: ./1.jpg
 section: 'home'
 priority: 40

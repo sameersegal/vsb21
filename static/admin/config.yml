@@ -28,8 +28,24 @@ collections:
       - { label: "Title", name: "title", widget: "string" }      
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
       - { label: "Excerpt", name: "description", widget: "string", required: false }    
-      - { label: "Body", name: "body", widget: "markdown" }
-
+      - { label: "Image", name: "hero", widget: "image", required: false}
+      - { label: "Video", name: "hero_video", widget: "file", required: false}
+      - { label: "Section", name: "section", widget: "hidden", default: "home", required: true}
+      - { label: "Priority", name: "priority", widget: "number", valueType: "int", required: true}
+      - { label: "Author", name: "author", widget: "string", required: true}
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options: 
+          - { label: "Image Quote 2 Column", value: "image_2_col"}
+          - { label: "Image Quote 3 Column", value: "image_3_col"}
+          - { label: "Video", value: "video"}
+          - { label: "normal", value: "normal"}
+        required: true
+      - { label: "Col1", name: "col1", widget: "list", required: false}        
+      - { label: "Col2", name: "col2", widget: "list", required: false}        
+      - { label: "Body", name: "body", widget: "markdown", required: false}
+       
   - name: "rta-journal"
     label: "RTA Journal"
     folder: "content/blog/rta-journal"
