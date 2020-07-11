@@ -2,7 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
-import { rhythm, scale } from "../utils/typography"
+// import { rhythm, scale } from "../utils/typography"
 
 const Layout = ({ location, title, children }) => {
 
@@ -28,15 +28,15 @@ const Layout = ({ location, title, children }) => {
           fixed={data.bg.childImageSharp.fixed}
           alt="Glimpses of the Valley"
           style={{
-            marginRight: rhythm(1 / 2),
+            // marginRight: rhythm(1 / 2),
             marginBottom: 0,
             minWidth: 50,            
           }}          
         />
         <h1
           style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
+            // ...scale(1.5),
+            // marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
         >
@@ -77,8 +77,8 @@ const Layout = ({ location, title, children }) => {
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        // maxWidth: rhythm(24),
+        // padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
       <header>{header}</header>

@@ -4,7 +4,7 @@ import Image from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+// import { rhythm } from "../utils/typography"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -24,7 +24,7 @@ const BlogIndex = ({ data, location }) => {
             <section dangerouslySetInnerHTML={{ __html: node.html }} />
             <hr
               style={{
-                marginBottom: rhythm(1),
+                // marginBottom: rhythm(1),
               }}
             />      
           </article>

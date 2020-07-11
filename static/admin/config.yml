@@ -60,6 +60,8 @@ collections:
       - { label: "Title", name: "title", widget: "string" }      
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
       - { label: "Excerpt", name: "description", widget: "string", required: false }    
+      - { label: "Section", name: "section", widget: "hidden", default: "rta-journal", required: true}
+      - { label: "Priority", name: "priority", widget: "number", valueType: "int", required: true, hint: "Decides the order of the posts. The lower the value, the earlier the post appears on the RTA journal page"}
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "musings-and-memories"
@@ -75,4 +77,6 @@ collections:
       - { label: "Title", name: "title", widget: "string" }      
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
       - { label: "Excerpt", name: "description", widget: "string", required: false }    
+      - { label: "Section", name: "section", widget: "hidden", default: "musings-and-memories", required: true}
+      - { label: "Priority", name: "priority", widget: "number", valueType: "int", required: true, hint: "Decides the order of the posts. The lower the value, the earlier the post appears on the M&M page"}
       - { label: "Body", name: "body", widget: "markdown" }
