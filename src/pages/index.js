@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Image from "gatsby-image"
 
+import ImageQuote from "../components/image_quote"
 import ImageQuote2 from "../components/image_quote_2col"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -18,12 +19,28 @@ const BlogIndex = ({ data, location }) => {
         const title = node.frontmatter.title || node.fields.slug
         const isVideo = !!node.frontmatter.hero_video
         const isImageQuote2 = node.frontmatter.type === "image_3_col"
+        const isImageQuote = node.frontmatter.type === "image_2_col"
         return (
           <article key={node.fields.slug}>
             {isImageQuote2 &&
-              <ImageQuote2 image={node.frontmatter.hero.publicURL} col1={node.frontmatter.col1} col2={node.frontmatter.col2}></ImageQuote2>
+              <ImageQuote2 
+                title={node.frontmatter.title}
+                image={node.frontmatter.hero.publicURL} 
+                col1={node.frontmatter.col1} 
+                col2={node.frontmatter.col2}
+                author={node.frontmatter.author}
+                date={node.frontmatter.date}
+              ></ImageQuote2>
             }
-            {!isImageQuote2 &&
+            {isImageQuote &&
+              <ImageQuote 
+                title={node.frontmatter.title}
+                image={node.frontmatter.hero.publicURL} 
+                html={node.html}                 
+                author={node.frontmatter.author}                
+              ></ImageQuote>
+            }
+            {!isImageQuote2 && !isImageQuote &&
               <header>
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>                                
                   {isVideo &&                 
@@ -76,6 +93,7 @@ export const pageQuery = graphql`
             slug
           }
           id
+          html
         }
       }
     }

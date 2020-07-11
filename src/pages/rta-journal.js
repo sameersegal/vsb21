@@ -12,8 +12,7 @@ const RTAIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
+      <SEO title="All posts" />      
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         const isVideo = !!node.frontmatter.hero_video        
