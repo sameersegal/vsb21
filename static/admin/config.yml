@@ -45,6 +45,7 @@ collections:
       - { label: "Col1", name: "col1", widget: "list", required: false}        
       - { label: "Col2", name: "col2", widget: "list", required: false}        
       - { label: "Body", name: "body", widget: "markdown", required: false}
+    sortableFields: ["priority","commit_date","date"]
        
   - name: "rta-journal"
     label: "RTA Journal"
