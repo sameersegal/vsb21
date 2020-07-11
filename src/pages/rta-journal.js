@@ -12,15 +12,19 @@ const RTAIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
+      <div>
+          <a href="#assemblies">Assemblies</a>
+      </div>
       <SEO title="All posts" />      
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
-        const isVideo = !!node.frontmatter.hero_video        
-        const tag = "#" + node.fields.slug.substr(1).toLocaleLowerCase()
+        const isVideo = !!node.frontmatter.hero_video  
+        
+        const tag = node.fields.slug.split("/")[2]
         return (
           <article key={node.fields.slug}>            
             <header>
-              <a href={{tag}}>{node.frontmatter.title}</a>
+              <a name={tag}>{node.frontmatter.title}</a>
             </header>      
             <section dangerouslySetInnerHTML={{ __html: node.html }} />
             <hr
