@@ -69,14 +69,14 @@ const BlogIndex = ({ data, location }) => {
             {!isImageQuote2 && !isImageQuote && !isImageBackground &&
               <header>
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>                                
-                  {/* {isVideo &&                 
+                  {isVideo &&                 
                     <video poster={node.frontmatter.hero.publicURL} autoPlay loop width="600" height="400">
                       <source src={node.frontmatter.hero_video.publicURL} type="video/mp4"/>
                     </video>                              
-                  } */}
-                  {/* {!isVideo &&
-                    <Image src={node.frontmatter.hero.childImageSharp.fluid} />                    
-                  }  */}
+                  }
+                  {!isVideo &&
+                    <img src={node.frontmatter.hero.publicURL} />                    
+                  } 
                 </Link>                                
               </header> 
             }                       
@@ -107,6 +107,7 @@ export const pageQuery = graphql`
               publicURL
             }
             hero {
+              publicURL
               childImageSharp {
                 fluid(maxWidth: 600) {
                   ...GatsbyImageSharpFluid_noBase64
