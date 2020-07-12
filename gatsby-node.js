@@ -1,59 +1,62 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-// exports.createPages = async ({ graphql, actions }) => {
-//   const { createPage } = actions
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
 
-//   const blogPost = path.resolve(`./src/templates/blog-post.js`)  
-//   const result = await graphql(
-//     `
-//       {
-//         allMarkdownRemark(
-//           filter: {frontmatter: {section: {eq: "home"}}}
-//           sort: { fields: [frontmatter___priority], order: DESC }
-//           limit: 1000
-//         ) {
-//           edges {
-//             node {
-//               fields {
-//                 slug
-//               }
-//               frontmatter {
-//                 title
-//               }
-//             }
-//           }
-//         }
-//       }
-//     `
-//   )
+  const postComponent = path.resolve(`./src/templates/post.js`)  
+  const result = await graphql(
+    `
+      {
+        allMarkdownRemark(
+          filter: {frontmatter: {section: {eq: "home"}}}
+          sort: { fields: [frontmatter___priority], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                type
+              }
+            }
+          }
+        }
+      }
+    `
+  )
 
-//   if (result.errors) {
-//     throw result.errors
-//   }
+  if (result.errors) {
+    throw result.errors
+  }
 
-//   // Create blog posts pages.
-//   const posts = result.data.allMarkdownRemark.edges
+  // Create blog posts pages.
+  const posts = result.data.allMarkdownRemark.edges
 
-//   posts.forEach((post, index) => {
-//     const previous = index === posts.length - 1 ? null : posts[index + 1].node
-//     const next = index === 0 ? null : posts[index - 1].node
-//     const slug = post.node.fields.slug
+  posts.forEach((post, index) => {
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node
+    const next = index === 0 ? null : posts[index - 1].node
+    const slug = post.node.fields.slug
+    const {type, title} = post.node.frontmatter
 
-//     // these are custom pages that we don't want overriden
-//     if (slug.indexOf(['/rta-journal','/rta-journal/','/musings-and-memories','/musings-and-memories/']) == -1) {
-//       createPage({
-//         path: slug,
-//         component: blogPost,
-//         context: {
-//           slug: post.node.fields.slug,
-//           previous,
-//           next,
-//         },
-//       })
-//     }    
-//   })
-// }
+    console.log(title, type)
+
+    if (type === "post" ) {
+      createPage({
+        path: slug,
+        component: postComponent,
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    }    
+  })
+}
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions

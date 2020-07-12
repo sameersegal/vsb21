@@ -4,6 +4,7 @@ import Image from "gatsby-image"
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 import ImageQuote from "../components/image_quote"
+import ImagePost from "../components/image_post"
 import ImageQuote2 from "../components/image_quote_2col"
 import ImageQuoteBackground from "../components/image_quote_background"
 import Layout from "../components/layout"
@@ -38,6 +39,8 @@ const BlogIndex = ({ data, location }) => {
         const isImageQuote2 = node.frontmatter.type === "image_3_col"
         const isImageQuote = node.frontmatter.type === "image_2_col"
         const isImageBackground = node.frontmatter.type === "image_background"
+        const isPost = node.frontmatter.type === "post"
+
         return (
           <article key={node.fields.slug}>
             {isImageQuote2 &&
@@ -66,7 +69,16 @@ const BlogIndex = ({ data, location }) => {
                 author={node.frontmatter.author}                
               ></ImageQuoteBackground>
             }
-            {!isImageQuote2 && !isImageQuote && !isImageBackground &&
+            {isPost &&
+              <ImagePost 
+                title={node.frontmatter.title}
+                image={node.frontmatter.hero} 
+                html={node.frontmatter.description}                 
+                to={node.fields.slug}                
+                read_more={node.frontmatter.read_more}
+              ></ImagePost>
+            }
+            {!isImageQuote2 && !isImageQuote && !isImageBackground && !isPost &&
               <header>
                 {/* <Link style={{ boxShadow: `none` }} to={node.fields.slug}>                                 */}
                   {isVideo &&                 
@@ -83,7 +95,8 @@ const BlogIndex = ({ data, location }) => {
                   } 
                 {/* </Link>                                 */}
               </header> 
-            }                       
+            }       
+            <hr />                
           </article>
         )
       })}
@@ -122,6 +135,7 @@ export const pageQuery = graphql`
             type
             caption
             author
+            read_more
           }
           fields {
             slug

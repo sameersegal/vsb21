@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Container from './container';
 import Img from 'gatsby-image';
+import {Link} from 'gatsby';
 
 const IQsWrapper = styled.div`
   background: white;
@@ -102,21 +103,22 @@ const IQImg = styled(Img)`
   }
 `;
 
-const ImageQuote = ({title, image, html, author}) => {
+const ImagePost = ({title, image, html, to, read_more}) => {
     return (
         <IQBlockWrapper bg="#DDDDDD">
             <Container>
-                <div className="left">
+                <div className="left">                  
                     <div className="info">                        
+                        <div className="p__title">
+                            <h3>{title}</h3>
+                        </div>                                      
                         <div
                         className="p__desc"
                         dangerouslySetInnerHTML={{
                             __html: html,
                         }}
-                        />  
-                        <div className="p__title">
-                            <h3>{author}</h3>
-                        </div>                                      
+                        />     
+                        <Link to={to}>{read_more}</Link>                     
                     </div>
                 </div>
                 <div className="right">
@@ -130,4 +132,4 @@ const ImageQuote = ({title, image, html, author}) => {
     )
 }
 
-export default ImageQuote;
+export default ImagePost;
