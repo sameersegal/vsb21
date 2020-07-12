@@ -211,7 +211,7 @@ export default function Header({ location, links }) {
       <Fragment>
         {links.map(({link, title, type})=> {
           return (
-            <AnchorLink to={link}>{title}</AnchorLink>
+            <AnchorLink to={link} key={link}>{title}</AnchorLink>
           )
         })}                
       </Fragment>

@@ -38,7 +38,7 @@ collections:
           - { label: "Video", value: "video"}
           - { label: "normal", value: "normal"}
         required: true
-      - { label: "Image", name: "hero", widget: "image", required: false}
+      - { label: "Image", name: "hero", widget: "image", required: true}
       - { label: "Video", name: "hero_video", widget: "file", required: false, hint: "Only required if type is video"}
       - { label: "Section", name: "section", widget: "hidden", default: "home", required: true}
       - { label: "Priority", name: "priority", widget: "number", valueType: "int", required: true, hint: "Decides the order of the posts. The lower the value, the earlier the post appears on the home page"}

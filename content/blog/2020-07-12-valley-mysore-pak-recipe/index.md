@@ -1,14 +1,14 @@
 ---
 title: Valley Mysore Pak Recipe
 date: 2020-07-12
-type: normal
+hero: ./mysore-pak.jpg
 section: home
 priority: 50
 author: Janani
 ---
 ▹ Vegetarian, gluten-free, Valley-special\
-**\
-Servings:** 10\
+
+**Servings:** 10\
 **Cook Time:** 20-25 minutes\
 **Setting Time:** 15-20 minutes\
 **Total Time:** 35-45 minutes
