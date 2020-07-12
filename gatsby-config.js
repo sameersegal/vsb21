@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Glimpses of the Valley`,    
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Valley's 42 Birthday. July 17th 2020`,
     siteUrl: `https://vsb-simple.netlify.app/`,
     social: {
       twitter: `thevalleyschool`,
