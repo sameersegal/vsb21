@@ -6,7 +6,7 @@ import ImageQuote from "../components/image_quote"
 import ImageQuote2 from "../components/image_quote_2col"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-// import { rhythm } from "../utils/typography"
+
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
