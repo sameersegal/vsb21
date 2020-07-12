@@ -33,7 +33,7 @@ const BlogIndex = ({ data, location }) => {
             {isImageQuote2 &&
               <ImageQuote2 
                 title={node.frontmatter.title}
-                image={node.frontmatter.hero.publicURL} 
+                image={node.frontmatter.hero} 
                 col1={node.frontmatter.col1} 
                 col2={node.frontmatter.col2}
                 author={node.frontmatter.author}
@@ -43,7 +43,7 @@ const BlogIndex = ({ data, location }) => {
             {isImageQuote &&
               <ImageQuote 
                 title={node.frontmatter.title}
-                image={node.frontmatter.hero.publicURL} 
+                image={node.frontmatter.hero} 
                 html={node.html}                 
                 author={node.frontmatter.author}                
               ></ImageQuote>
@@ -51,14 +51,14 @@ const BlogIndex = ({ data, location }) => {
             {!isImageQuote2 && !isImageQuote &&
               <header>
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>                                
-                  {isVideo &&                 
+                  {/* {isVideo &&                 
                     <video poster={node.frontmatter.hero.publicURL} autoPlay loop width="600" height="400">
                       <source src={node.frontmatter.hero_video.publicURL} type="video/mp4"/>
                     </video>                              
-                  }
-                  {!isVideo &&
-                    <img width="600" src={node.frontmatter.hero.publicURL}  alt="" loading="lazy" />                    
-                  } 
+                  } */}
+                  {/* {!isVideo &&
+                    <Image src={node.frontmatter.hero.childImageSharp.fluid} />                    
+                  }  */}
                 </Link>                                
               </header> 
             }                       
@@ -89,7 +89,11 @@ export const pageQuery = graphql`
               publicURL
             }
             hero {
-              publicURL
+              childImageSharp {
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid_noBase64
+                }
+              }              
             }
             priority
             type

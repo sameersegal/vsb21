@@ -41,6 +41,8 @@ const HeroWrapper = styled.div`
         font-weight: 700;
       }
       h2 {
+        color: ${props => props.theme.colors.white} !important;         
+        font-family: ${props => props.theme.fonts.playlistscript} !important;
         font-size: 6rem;
         line-height: 6rem;
         margin-bottom: 1rem;

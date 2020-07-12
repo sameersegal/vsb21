@@ -1,10 +1,8 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-
 import styled, { ThemeProvider } from 'styled-components';
 
 // import GlobalStyle from '../styles/Global';
+import GlobalFonts from '../styles/fonts/fonts';
 import Theme from '../styles/Theme';
 
 import Header from './Header';
@@ -18,7 +16,8 @@ const SiteRoot = styled.div`
 const Layout = ({ location, title, children }) => {  
   return (
     <SiteRoot>
-      <ThemeProvider theme={Theme}>
+      <GlobalFonts/>
+      <ThemeProvider theme={Theme}>        
         <>
           <Header location={location} />
           {children}

@@ -1,3 +1,5 @@
+
+
 /* eslint-disable quotes */
 const Theme = {
     colors: {
@@ -7,6 +9,7 @@ const Theme = {
       grey: '#EAEAEA',
       greyDark: '#2B2B2B',
       black: '#212529',
+      white: '#FFFFFF'
     },
     gradients: {
       red: 'linear-gradient(90deg, #EF412D, #4F2920)',
@@ -20,6 +23,8 @@ const Theme = {
     fonts: {
       exo: `'Exo 2', sans-serif`,
       robo: `'Roboto Mono', monospace`,
+      headings: `'Playlist Script', 'Roboto Mono', monospace`,
+      copy: `'Cormorant Garamond Medium', 'Roboto Mono', monospace`
     },
     sizes: {
       mobile: '600px',
