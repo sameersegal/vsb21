@@ -26,15 +26,8 @@ const BlogIndex = ({ data, location }) => {
         const tag = node.fields.slug.split("/")[2]
         return (
           <article key={node.fields.slug} id={tag}>            
-            <header>
-              {node.frontmatter.title}                              
-            </header>      
             <section dangerouslySetInnerHTML={{ __html: node.html }} />
-            <hr
-              style={{
-                // marginBottom: rhythm(1),
-              }}
-            />      
+            <hr />      
           </article>
         )
       })}
