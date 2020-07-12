@@ -4,6 +4,7 @@ import Image from "gatsby-image"
 
 import ImageQuote from "../components/image_quote"
 import ImageQuote2 from "../components/image_quote_2col"
+import ImageQuoteBackground from "../components/image_quote_background"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
@@ -28,6 +29,7 @@ const BlogIndex = ({ data, location }) => {
         const isVideo = !!node.frontmatter.hero_video
         const isImageQuote2 = node.frontmatter.type === "image_3_col"
         const isImageQuote = node.frontmatter.type === "image_2_col"
+        const isImageBackground = node.frontmatter.type === "image_background"
         return (
           <article key={node.fields.slug}>
             {isImageQuote2 &&
@@ -48,7 +50,15 @@ const BlogIndex = ({ data, location }) => {
                 author={node.frontmatter.author}                
               ></ImageQuote>
             }
-            {!isImageQuote2 && !isImageQuote &&
+            {isImageBackground &&
+              <ImageQuoteBackground 
+                title={node.frontmatter.title}
+                image={node.frontmatter.hero} 
+                html={node.html}                 
+                author={node.frontmatter.author}                
+              ></ImageQuoteBackground>
+            }
+            {!isImageQuote2 && !isImageQuote && !isImageBackground &&
               <header>
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>                                
                   {/* {isVideo &&                 

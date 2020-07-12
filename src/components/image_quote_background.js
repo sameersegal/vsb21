@@ -99,29 +99,24 @@ const IQImg = styled(Img)`
   }
 `;
 
+const IQText= styled.div`
+  color: white;
+  font-family: ${props => props.theme.fonts.heading} !important;
+`;
+
 const ImageQuote = ({title, image, html, author}) => {
     return (
         <IQBlockWrapper bg="#DDDDDD">
-            <Container>
-                <div className="left">
-                    <div className="info">                        
-                        <div
-                        className="p__desc"
-                        dangerouslySetInnerHTML={{
-                            __html: html,
-                        }}
-                        />  
-                        <div className="p__title">
-                            <h3>{author}</h3>
-                        </div>                                      
-                    </div>
-                </div>
-                <div className="right">
-                    <IQImg
-                        backgroundColor="#DDDDDD"
-                        fluid={image.childImageSharp.fluid}
-                    />
-                </div>
+            <Container>                
+              <IQImg
+                  backgroundColor="#DDDDDD"
+                  fluid={image.childImageSharp.fluid}
+              />      
+              <IQText
+                dangerouslySetInnerHTML={{
+                    __html: html,
+                }}
+                />            
             </Container>
         </IQBlockWrapper>
     )
