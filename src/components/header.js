@@ -207,8 +207,8 @@ export default function Header({ location }) {
   function renderLinks() {
     return (
       <Fragment>
-        <AnchorLink to="/#letters">Letters</AnchorLink>
-        <AnchorLink to="/#sounds">Sounds</AnchorLink>
+        <AnchorLink to="/rta-journal/#assemblies">Assemblies</AnchorLink>
+        <AnchorLink to="/rta-journal/#league-matches">League Matches</AnchorLink>
         <AnchorLink className="divider" to="/#recipes">Recipes</AnchorLink>
         <Link to={'/rta-journal'}>
           RTA Journal

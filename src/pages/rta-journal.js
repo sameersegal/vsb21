@@ -29,10 +29,7 @@ const RTAIndex = ({ data, location }) => {
         
         const tag = node.fields.slug.split("/")[2]
         return (
-          <article key={node.fields.slug}>            
-            <header>
-              <a name={tag}>{node.frontmatter.title}</a>
-            </header>      
+          <article key={node.fields.slug} id={tag}>                        
             <section dangerouslySetInnerHTML={{ __html: node.html }} />
             <hr/>      
           </article>
