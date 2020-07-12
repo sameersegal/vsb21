@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Container from './Container';
+import Container from './container';
 import Img from 'gatsby-image';
 
 const IQsWrapper = styled.div`
