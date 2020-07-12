@@ -2,9 +2,9 @@ import React from "react"
 import styled, { ThemeProvider } from 'styled-components';
 
 import GlobalFonts from '../styles/fonts';
-import Theme from '../styles/Theme';
+import Theme from '../styles/theme';
 
-import Header from './Header';
+import Header from './header';
 // import Footer from './Footer';
 
 const SiteRoot = styled.div`

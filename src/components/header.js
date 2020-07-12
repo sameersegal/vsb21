@@ -6,7 +6,7 @@ import Img from 'gatsby-image';
 import { useScrollYPosition } from 'react-use-scroll-position';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
-import Container from './Container';
+import Container from './container';
 
 const HeaderWrapper = styled.nav`
   background: transparent;

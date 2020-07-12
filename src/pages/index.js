@@ -44,10 +44,10 @@ const BlogIndex = ({ data, location }) => {
               <ImageQuote2 
                 title={node.frontmatter.title}
                 image={node.frontmatter.hero} 
-                col1={node.frontmatter.col1} 
-                col2={node.frontmatter.col2}
                 author={node.frontmatter.author}
                 date={node.frontmatter.date}
+                caption={node.frontmatter.caption}
+                html={node.html}
               ></ImageQuote2>
             }
             {isImageQuote &&
@@ -116,8 +116,7 @@ export const pageQuery = graphql`
             }
             priority
             type
-            col1
-            col2
+            caption
             author
           }
           fields {

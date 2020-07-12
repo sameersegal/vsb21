@@ -6,43 +6,42 @@ hero: ./1.jpg
 section: 'home'
 priority: 1
 type: 'image_3_col'
-col1:
-    - Do you know it's your birthday!
-    - I know you laugh at all such thoughts.
-    - You were always there.
-    - We came to stay with you this day.
-    - And, we needed an excuse to celebrate.
-    - Pray, it has rained and you are drenched
-    - in Heaven's affection.
-    - Pray, the lakes are full and the streams
-    - are flowing.
-    - Hope the birds are rejoicing and 
-    - the elephants are safe.
-    - Pray, the panther can still hide
-    - and the deer take refuge.
-    - Are the trees glistening in the sun
-    - Are the rocks shining bright.
-    - Pray, you preserve the child's
-    - smile innocent,
-col2: 
-    - And they in turn see the sky,
-    - hidden wild-flowers filled with dewdrops
-    - away from the paths.
-    - Pray, the grown-ups are joyous
-    - in their learning and 
-    - sharing affection.
-    - Oh! Valley you have been
-    - a blessing unto me and  all humanity.
-    - Let's dance around the banyan and neem
-    - and fill the skies with rainbows divine.
-    - Let’s chant and demolish
-    - all evil, ghosts and hells unseen.
-    - Let's sing to the saplings new
-    - and the seeds unborn.
-    - Let’s pray for that sacredness
-    - for which you were found.
-    - Oh! Valley
-    - Bless Us All Now.
 caption: "twilight in the valley"
 author: "Dr Satish Inamdar"
 ---
+
+Do you know it's your birthday!<br/>
+I know you laugh at all such thoughts.<br/>
+You were always there.<br/>
+We came to stay with you this day.<br/>
+And, we needed an excuse to celebrate.<br/>
+Pray, it has rained and you are drenched<br/>
+in Heaven's affection.<br/>
+Pray, the lakes are full and the streams<br/>
+are flowing.<br/>
+Hope the birds are rejoicing and <br/>
+the elephants are safe.<br/>
+Pray, the panther can still hide<br/>
+and the deer take refuge.<br/>
+Are the trees glistening in the sun<br/>
+Are the rocks shining bright.<br/>
+Pray, you preserve the child's<br/>
+smile innocent,<br/>
+And they in turn see the sky,<br/>
+hidden wild-flowers filled with dew drops<br/>
+away from the paths.<br/>
+Pray, the grown-ups are joyous<br/>
+in their learning and <br/>
+sharing affection.<br/>
+Oh! Valley you have been<br/>
+a blessing unto me and  all humanity.<br/>
+Let's dance around the banyan and neem<br/>
+and fill the skies with rainbows divine.<br/>
+Let’s chant and demolish<br/>
+all evil, ghosts and hells unseen.<br/>
+Let's sing to the saplings new<br/>
+and the seeds unborn.<br/>
+Let’s pray for that sacredness<br/>
+for which you were found.<br/>
+Oh! Valley<br/>
+Bless Us All Now.<br/>
