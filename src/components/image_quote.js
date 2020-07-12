@@ -37,14 +37,15 @@ const IQBlockWrapper = styled.div`
     height: 100%;
     align-items: center;
     .right {
-      width: 45%;
+      width: 25%;
     }
     .left {
-      width: 55%;
+      width: 75%;
     //   color: white;
       .p__title {
         h3 {
         //   color: white;
+          font-family: ${props => props.theme.fonts.heading} !important;
           font-weight: 800;
           font-size: 2rem;
           line-height: 6rem;

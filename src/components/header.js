@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Link, StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-// import { useScrollYPosition } from 'react-use-scroll-position';
+import { useScrollYPosition } from 'react-use-scroll-position';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 import Container from './Container';
@@ -193,7 +193,7 @@ const LogoImg = styled(Img)`
   width: 6rem;
 `;
 
-export default function Header({ location }) {
+export default function Header({ location, links }) {
   const [open, setOpen] = useState(false);
 
   // const scrollY = typeof window !== 'undefined' ? useScrollYPosition() : 0,
@@ -204,16 +204,16 @@ export default function Header({ location }) {
     setOpen(false);
   }, [location, scrollY]);
 
+  links = links || []
+
   function renderLinks() {
     return (
       <Fragment>
-        <AnchorLink to="/rta-journal/#assemblies">Assemblies</AnchorLink>
-        <AnchorLink to="/rta-journal/#league-matches">League Matches</AnchorLink>
-        <AnchorLink className="divider" to="/#recipes">Recipes</AnchorLink>
-        <Link to={'/rta-journal'}>
-          RTA Journal
-        </Link>
-        <Link to={'/musings-and-memories'}>Musings and Memories</Link>
+        {links.map(({link, title, type})=> {
+          return (
+            <AnchorLink to={link}>{title}</AnchorLink>
+          )
+        })}                
       </Fragment>
     );
   }

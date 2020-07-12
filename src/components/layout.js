@@ -15,13 +15,13 @@ const SiteRoot = styled.div`
 
 // font-family: ${props => props.theme.fonts.copy}
 
-const Layout = ({ location, title, children }) => {  
+const Layout = ({ location, title, links, children }) => {  
   return (
     <SiteRoot>
       <GlobalFonts/>
       <ThemeProvider theme={Theme}>        
         <>
-          <Header location={location} />
+          <Header location={location} links={links} />
           {children}
           {/* <Footer /> */}
         </>

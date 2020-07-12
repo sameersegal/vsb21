@@ -1,6 +1,7 @@
-import React from "react"
+import React, {Fragment} from "react"
 import { Link, graphql } from "gatsby"
 import Image from "gatsby-image"
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 import ImageQuote from "../components/image_quote"
 import ImageQuote2 from "../components/image_quote_2col"
@@ -15,8 +16,16 @@ const BlogIndex = ({ data, location }) => {
   const desktopImage = data.desktopImage
   const mobileImage = data.mobileImage
 
+  const links = []
+  // posts.forEach(({node: {frontmatter: {title}, fields: {slug}}}) => {
+  //   const s = "/rta-journal/#" + slug.split("/")[2]
+  //   links.push({'link':s, title, 'type': 'anchor'})
+  // })
+  links.push({'link':'/rta-journal', 'title': 'RTA Journal'})
+  links.push({'link':'/musings-and-memories', 'title': 'Musings & Memories'})
+
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} links={links}>
       <SEO title="All posts" />
       <Hero
         desktop={desktopImage.childImageSharp.fluid}

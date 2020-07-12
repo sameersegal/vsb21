@@ -11,17 +11,13 @@ const RTAIndex = ({ data, location }) => {
   
   const links = []
   posts.forEach(({node: {frontmatter: {title}, fields: {slug}}}) => {
-    const s = slug.split("/")[2]
-    links.push({'link':s, title})
+    const s = "/rta-journal/#" + slug.split("/")[2]
+    links.push({'link':s, title, 'type': 'anchor'})
   })
-
-  console.log(links)
+  links.push({'link':'/musings-and-memories', 'title': 'Musings & Memories'})
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <div>        
-          <a href="#assemblies">Assemblies</a>
-      </div>
+    <Layout location={location} title={siteTitle} links={links}>
       <SEO title="All posts" />      
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug

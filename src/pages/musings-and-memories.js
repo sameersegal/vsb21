@@ -10,14 +10,22 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 
+  const links = []
+  posts.forEach(({node: {frontmatter: {title}, fields: {slug}}}) => {
+    const s = "/musings-and-memories/#" + slug.split("/")[2]
+    links.push({'link':s, title, 'type': 'anchor'})
+  })
+  links.push({'link':'/rta-journal', 'title': 'RTA Journal'})
+
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} links={links}>
       <SEO title="All posts" />      
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         const isVideo = !!node.frontmatter.hero_video
+        const tag = node.fields.slug.split("/")[2]
         return (
-          <article key={node.fields.slug}>            
+          <article key={node.fields.slug} id={tag}>            
             <header>
               {node.frontmatter.title}                              
             </header>      
