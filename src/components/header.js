@@ -71,7 +71,7 @@ const HeaderWrapper = styled.nav`
       display: none;
       a {
         color: ${props => props.theme.colors.black};
-        font-size: 1.4rem;
+        font-size: 1.1 rem;
         line-height: 2.8rem;
         text-transform: uppercase;
         margin-left: 1.5rem;
@@ -209,8 +209,8 @@ export default function Header({ location }) {
       <Fragment>
         <AnchorLink to="/#letters">Letters</AnchorLink>
         <AnchorLink to="/#sounds">Sounds</AnchorLink>
-        <AnchorLink to="/#recipes">Recipes</AnchorLink>
-        <Link className="divider" to={'/rta-journal'}>
+        <AnchorLink className="divider" to="/#recipes">Recipes</AnchorLink>
+        <Link to={'/rta-journal'}>
           RTA Journal
         </Link>
         <Link to={'/musings-and-memories'}>Musings and Memories</Link>

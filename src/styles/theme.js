@@ -21,10 +21,8 @@ const Theme = {
       boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.2)',
     },
     fonts: {
-      exo: `'Exo 2', sans-serif`,
-      robo: `'Roboto Mono', monospace`,
-      headings: `'Playlist Script', 'Roboto Mono', monospace`,
-      copy: `'Cormorant Garamond Medium', 'Roboto Mono', monospace`
+      heading: `'Playlist', monospace`,
+      copy: `'Cormorant Garamond', serif`
     },
     sizes: {
       mobile: '600px',

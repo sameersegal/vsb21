@@ -15,14 +15,15 @@ const HeroWrapper = styled.div`
     padding-top: 100px;
   }
   section {
-    align-items: center;
+    align-items: flex-end;
     position: relative;
     z-index: 100;
     .content {
       position: relative;
       z-index: 100;
-      width: 60%;
-      margin-left: 2rem;
+      width: 100%;
+      // margin-left: 2rem;
+      margin-bottom: 2rem;
       @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
         width: 100%;
         margin-left: 0;
@@ -30,34 +31,15 @@ const HeroWrapper = styled.div`
           width: 100%;
         }
       }
-      h1,
-      h2,
-      p {
-        margin: 0;
-      }
-      h1,
-      p {
-        line-height: 2.2rem;
-        font-weight: 700;
-      }
       h2 {
+        
         color: ${props => props.theme.colors.white} !important;         
         font-family: ${props => props.theme.fonts.heading} !important;
         font-size: 6rem;
         line-height: 6rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         margin-top: 0.5rem;
-      }
-      h1,
-      p {
-        font-size: 1.6rem;
-        font-family: ${props => props.theme.fonts.robo} !important;
-        text-transform: none !important;
-        font-weight: 400 !important;
-      }
-      button {
-        margin-top: 2rem;
-      }
+      }      
     }
   }
 `;

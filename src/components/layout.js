@@ -1,8 +1,7 @@
 import React from "react"
 import styled, { ThemeProvider } from 'styled-components';
 
-// import GlobalStyle from '../styles/Global';
-import GlobalFonts from '../styles/fonts/fonts';
+import GlobalFonts from '../styles/fonts';
 import Theme from '../styles/Theme';
 
 import Header from './Header';
@@ -11,7 +10,10 @@ import Header from './Header';
 const SiteRoot = styled.div`
   background: white;
   padding-top: 80px;
+  font-family: 'Cormorant Garamond', serif;
 `;
+
+// font-family: ${props => props.theme.fonts.copy}
 
 const Layout = ({ location, title, children }) => {  
   return (

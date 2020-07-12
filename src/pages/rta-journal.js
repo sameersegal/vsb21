@@ -4,15 +4,22 @@ import Image from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-// import { rhythm } from "../utils/typography"
 
 const RTAIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges  
+  const posts = data.allMarkdownRemark.edges 
+  
+  const links = []
+  posts.forEach(({node: {frontmatter: {title}, fields: {slug}}}) => {
+    const s = slug.split("/")[2]
+    links.push({'link':s, title})
+  })
+
+  console.log(links)
 
   return (
     <Layout location={location} title={siteTitle}>
-      <div>
+      <div>        
           <a href="#assemblies">Assemblies</a>
       </div>
       <SEO title="All posts" />      
@@ -27,11 +34,7 @@ const RTAIndex = ({ data, location }) => {
               <a name={tag}>{node.frontmatter.title}</a>
             </header>      
             <section dangerouslySetInnerHTML={{ __html: node.html }} />
-            <hr
-              style={{
-                // marginBottom: rhythm(1),
-              }}
-            />      
+            <hr/>      
           </article>
         )
       })}
