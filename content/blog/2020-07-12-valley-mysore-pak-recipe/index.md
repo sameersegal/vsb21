@@ -3,6 +3,7 @@ title: Valley Mysore Pak Recipe
 date: 2020-07-12
 hero: ./mysore-pak.jpg
 section: home
+type: image_2_col
 priority: 50
 author: Janani
 ---

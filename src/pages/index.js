@@ -68,16 +68,20 @@ const BlogIndex = ({ data, location }) => {
             }
             {!isImageQuote2 && !isImageQuote && !isImageBackground &&
               <header>
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>                                
+                {/* <Link style={{ boxShadow: `none` }} to={node.fields.slug}>                                 */}
                   {isVideo &&                 
                     <video poster={node.frontmatter.hero.publicURL} autoPlay loop width="600" height="400">
                       <source src={node.frontmatter.hero_video.publicURL} type="video/mp4"/>
                     </video>                              
                   }
                   {!isVideo &&
-                    <img src={node.frontmatter.hero.publicURL} />                    
+                    <div                    
+                    dangerouslySetInnerHTML={{
+                        __html: node.html,
+                    }}
+                    />  
                   } 
-                </Link>                                
+                {/* </Link>                                 */}
               </header> 
             }                       
           </article>
