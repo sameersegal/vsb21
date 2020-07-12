@@ -1,10 +1,17 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Image from "gatsby-image"
+import styled from 'styled-components';
 
 import Layout from "../components/layout"
+import Container from "../components/container"
 import SEO from "../components/seo"
 // import { rhythm } from "../utils/typography"
+
+const Container2 = styled(Container)`
+  max-width: 1400px;
+  width: 100%;
+`
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -20,17 +27,16 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle} links={links}>
       <SEO title="All posts" />      
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        const isVideo = !!node.frontmatter.hero_video
-        const tag = node.fields.slug.split("/")[2]
-        return (
-          <article key={node.fields.slug} id={tag}>            
-            <section dangerouslySetInnerHTML={{ __html: node.html }} />
-            <hr />      
-          </article>
-        )
-      })}
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
+          const isVideo = !!node.frontmatter.hero_video
+          const tag = node.fields.slug.split("/")[2]
+          return (
+            <article key={node.fields.slug} id={tag}>            
+              <section dangerouslySetInnerHTML={{ __html: node.html }} />  
+            </article>
+          )
+        })}      
     </Layout>
   )
 }
