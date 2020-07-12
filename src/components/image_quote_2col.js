@@ -4,6 +4,10 @@ import styled from 'styled-components';
 import Container from './container';
 import Img from 'gatsby-image';
 
+const Container2 = styled(Container)`
+  height: 50%;
+`
+
 const IQsWrapper = styled.div`
   background: white;
   margin-bottom: 10rem;
@@ -96,8 +100,8 @@ const IQBlockWrapper = styled.div`
 `;
 
 const IQImg = styled(Img)`
-  width: 100% !important;
-  max-width: 100% !important;
+  width: 85% !important;
+  max-width: 85% !important;
   @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
     margin-top: 4rem;
   }
@@ -109,7 +113,7 @@ const IQImg = styled(Img)`
 const ImageQuote2 = ({title, image, author, date, html, caption}) => {
     return (
         <IQBlockWrapper bg="#DDDDDD">
-            <Container>
+            <Container2>
                 <div className="left">
                     <IQImg
                         backgroundColor="#DDDDDD"
@@ -117,7 +121,7 @@ const ImageQuote2 = ({title, image, author, date, html, caption}) => {
                     />
                     <div className="p__title">
                             <h3>{caption}</h3>
-                        </div>                                                              
+                    </div>                                                              
                 </div>
                 <div className="right">
                     <div className="info">
@@ -125,12 +129,10 @@ const ImageQuote2 = ({title, image, author, date, html, caption}) => {
                             <h3>{title}</h3>
                         </div>                                                              
                         <div
-                        className="p__desc">
-                            <p dangerouslySetInnerHTML={{
+                        className="p__desc" dangerouslySetInnerHTML={{
                             __html: html,
                             }}
-                            />                                                 
-                        </div>                        
+                        />                                                                        
                     </div>
                     <div className="p__title">
                         <h3>{author}</h3>
@@ -139,7 +141,7 @@ const ImageQuote2 = ({title, image, author, date, html, caption}) => {
                         {date}
                     </div>                    
                 </div>
-            </Container>
+            </Container2>
         </IQBlockWrapper>        
     )
 }

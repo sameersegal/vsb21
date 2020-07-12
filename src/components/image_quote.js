@@ -19,7 +19,7 @@ const IQsWrapper = styled.div`
 `;
 
 const IQBlockWrapper = styled.div`
-  background: ${props => props.bg};
+  background: ${props => props.bg};  
   @media screen and (min-width: ${props => props.theme.sizes.tablet}) {
     height: 75rem;
   }

@@ -24,7 +24,7 @@ const HeaderWrapper = styled.nav`
       &.open {
         button {
           div {
-            background: ${props => props.theme.gradients.red};
+            background: ${props => props.theme.gradients.white};
             &.second {
               opacity: 0;
             }
@@ -73,9 +73,9 @@ const HeaderWrapper = styled.nav`
         color: ${props => props.theme.colors.black};
         font-size: 1.1 rem;
         line-height: 2.8rem;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         margin-left: 1.5rem;
-        font-size: 1.4rem;
+        // font-size: 1.4rem;
         position: relative;
         text-decoration: none;
         transition: all 0.3s ease;

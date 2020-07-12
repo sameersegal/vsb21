@@ -9,7 +9,7 @@ const HeroWrapper = styled.div`
   margin-top: -80px;
   position: relative !important;
   height: 700px;
-  background: ${props => props.theme.colors.red};
+  background: ${props => props.theme.colors.white};
   @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
     height: unset;
     padding-top: 100px;
@@ -32,7 +32,7 @@ const HeroWrapper = styled.div`
         }
       }
       h2 {
-        
+        text-align: center;
         color: ${props => props.theme.colors.white} !important;         
         font-family: ${props => props.theme.fonts.heading} !important;
         font-size: 6rem;
