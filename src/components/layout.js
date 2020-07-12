@@ -1,69 +1,32 @@
 import React from "react"
-import { Link } from "gatsby"
+import styled, { ThemeProvider } from 'styled-components';
 
-import { rhythm, scale } from "../utils/typography"
+import GlobalFonts from '../styles/fonts';
+import Theme from '../styles/theme';
 
-const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  let header
+import Header from './header';
+// import Footer from './Footer';
 
-  if (location.pathname === rootPath) {
-    header = (
-      <h1
-        style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
-    )
-  }
+const SiteRoot = styled.div`
+  background: white;
+  padding-top: 80px;
+  font-family: 'Cormorant Garamond', serif;
+`;
+
+// font-family: ${props => props.theme.fonts.copy}
+
+const Layout = ({ location, title, links, children }) => {  
   return (
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
-    >
-      <header>{header}</header>
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.thevalleyschool.info">Valley School</a>
-      </footer>
-    </div>
+    <SiteRoot>
+      <GlobalFonts/>
+      <ThemeProvider theme={Theme}>        
+        <>
+          <Header location={location} links={links} />
+          {children}
+          {/* <Footer /> */}
+        </>
+      </ThemeProvider>      
+    </SiteRoot>
   )
 }
 

@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: feature/adding-anchor-tags
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
@@ -16,35 +16,67 @@ public_folder: /media
 
 collections:
   - name: "posts"
-    label: "Posts"
+    label: "Home Page"
     folder: "content/blog"
     create: true
     delete: true
     path: "{{slug}}/index"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    media_folder: "images"
-    public_folder: "./images"
+    media_folder: "./"
+    public_folder: "./"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      # - { label: "Author", name: "author", widget: "relation", collection: "authors", valueField: "name", searchFields: ["name"] }
+      - { label: "Title", name: "title", widget: "string" }      
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
-      - { label: "Excerpt", name: "description", widget: "string", required: false }
-      # - { label: "Hero", name: "hero", widget: "image" }
+      - { label: "Excerpt", name: "description", widget: "string", required: false }    
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options: 
+          - { label: "Image Quote 2 Column", value: "image_2_col"}
+          - { label: "Image Quote 3 Column", value: "image_3_col"}
+          - { label: "Image Quote Background", value: "image_background"}
+          - { label: "Video", value: "video"}
+          - { label: "normal", value: "normal"}
+        required: true
+      - { label: "Image", name: "hero", widget: "image", required: false}
+      - { label: "Video", name: "hero_video", widget: "file", required: false, hint: "Only required if type is video"}
+      - { label: "Section", name: "section", widget: "hidden", default: "home", required: true}
+      - { label: "Priority", name: "priority", widget: "number", valueType: "int", required: true, hint: "Decides the order of the posts. The lower the value, the earlier the post appears on the home page"}
+      - { label: "Author", name: "author", widget: "string", required: true}
+      - { label: "Caption", name: "caption", widget: "string", required: false, hint: "Only for Image Quote 2 Column"}            
+      - { label: "Body", name: "body", widget: "markdown", required: false}
+    sortableFields: ["priority","commit_date","date"]
+       
+  - name: "rta-journal"
+    label: "RTA Journal"
+    folder: "content/blog/rta-journal"
+    create: true
+    delete: true
+    path: "{{slug}}/index"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: "./"
+    public_folder: "./"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }      
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
+      - { label: "Excerpt", name: "description", widget: "string", required: false }    
+      - { label: "Section", name: "section", widget: "hidden", default: "rta-journal", required: true}
+      - { label: "Priority", name: "priority", widget: "number", valueType: "int", required: true, hint: "Decides the order of the posts. The lower the value, the earlier the post appears on the RTA journal page"}
       - { label: "Body", name: "body", widget: "markdown" }
-  # - name: "authors"
-  #   label: "Authors"
-  #   folder: "content/authors/authors"
-  #   create: true
-  #   delete: true
-  #   format: "yml"
-  #   identifier_field: "name"
-  #   media_folder: "avatars"
-  #   public_folder: "./avatars"
-  #   editor:
-  #     preview: false
-  #   fields:
-  #     - { label: Name, name: name, widget: string }
-  #     - { label: Bio, name: bio, widget: string }
-  #     - { label: Featured, name: featured, widget: boolean, default: false }
-  #     - { label: Avatar, name: avatar, widget: image }
-  #     - { label: Social, name: social, widget: list, collapsed: false, field: { label: URL, name: url, widget: string } }
+
+  - name: "musings-and-memories"
+    label: "Musings and Memories"
+    folder: "content/blog/musings-and-memories"
+    create: true
+    delete: true
+    path: "{{slug}}/index"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: "./"
+    public_folder: "./"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }      
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
+      - { label: "Excerpt", name: "description", widget: "string", required: false }    
+      - { label: "Section", name: "section", widget: "hidden", default: "musings-and-memories", required: true}
+      - { label: "Priority", name: "priority", widget: "number", valueType: "int", required: true, hint: "Decides the order of the posts. The lower the value, the earlier the post appears on the M&M page"}
+      - { label: "Body", name: "body", widget: "markdown" }
