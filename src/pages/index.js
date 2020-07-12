@@ -6,15 +6,23 @@ import ImageQuote from "../components/image_quote"
 import ImageQuote2 from "../components/image_quote_2col"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Hero from "../components/hero"
 
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
+  const desktopImage = data.desktopImage
+  const mobileImage = data.mobileImage
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
+      <Hero
+        desktop={desktopImage.childImageSharp.fluid}
+        mobile={mobileImage.childImageSharp.fluid}
+        title={siteTitle}
+      />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         const isVideo = !!node.frontmatter.hero_video
@@ -94,6 +102,20 @@ export const pageQuery = graphql`
           }
           id
           html
+        }
+      }
+    }
+    desktopImage: file(absolutePath: { regex: "/home.jpg/" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    mobileImage: file(absolutePath: { regex: "/home.jpg/" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
