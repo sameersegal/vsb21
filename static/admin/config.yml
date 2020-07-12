@@ -34,6 +34,7 @@ collections:
         options: 
           - { label: "Image Quote 2 Column", value: "image_2_col"}
           - { label: "Image Quote 3 Column", value: "image_3_col"}
+          - { label: "Image Quote Background", value: "image_background"}
           - { label: "Video", value: "video"}
           - { label: "normal", value: "normal"}
         required: true
@@ -41,9 +42,8 @@ collections:
       - { label: "Video", name: "hero_video", widget: "file", required: false, hint: "Only required if type is video"}
       - { label: "Section", name: "section", widget: "hidden", default: "home", required: true}
       - { label: "Priority", name: "priority", widget: "number", valueType: "int", required: true, hint: "Decides the order of the posts. The lower the value, the earlier the post appears on the home page"}
-      - { label: "Author", name: "author", widget: "string", required: true}      
-      - { label: "Col1", name: "col1", widget: "list", required: false, minimize_collapsed: true, hint: "Only required if Image Quote 3 Col is selected"}        
-      - { label: "Col2", name: "col2", widget: "list", required: false, minimize_collapsed: true, hint: "Only required if Image Quote 3 Col is selected"}        
+      - { label: "Author", name: "author", widget: "string", required: true}
+      - { label: "Caption", name: "caption", widget: "string", required: false, hint: "Only for Image Quote 2 Column"}            
       - { label: "Body", name: "body", widget: "markdown", required: false}
     sortableFields: ["priority","commit_date","date"]
        
