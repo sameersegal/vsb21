@@ -1,6 +1,7 @@
 import React from "react"
 import styled, { ThemeProvider } from 'styled-components';
 
+import GlobalStyle from '../styles/Global';
 import GlobalFonts from '../styles/fonts';
 import Theme from '../styles/theme';
 
@@ -19,6 +20,7 @@ const Layout = ({ location, title, links, children }) => {
   return (
     <SiteRoot>
       <GlobalFonts/>
+      <GlobalStyle/>
       <ThemeProvider theme={Theme}>        
         <>
           <Header location={location} links={links} />

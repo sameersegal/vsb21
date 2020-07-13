@@ -21,7 +21,7 @@ const IQsWrapper = styled.div`
 const IQBlockWrapper = styled.div`
   background: ${props => props.bg};  
   @media screen and (min-width: ${props => props.theme.sizes.tablet}) {
-    height: 35rem;
+    height: 65rem;
   }
   @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
     padding-top: 4rem;
@@ -58,7 +58,7 @@ const IQBlockWrapper = styled.div`
       .p__desc {
         p {
           margin-bottom: 1.5rem;
-          line-height: 1.5rem;
+          // line-height: 1.5rem;
         }
         a {
           position: relative;

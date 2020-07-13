@@ -59,7 +59,7 @@ const IQBlockWrapper = styled.div`
       .p__desc {
         p {
           margin-bottom: 1.5rem;
-          line-height: 1.5rem;
+          // line-height: 1.5rem;
         }
         a {
           position: relative;
@@ -124,11 +124,12 @@ const ImagePost = ({title, image, html, to, read_more}) => {
                             <h3>{title}</h3>
                         </div>                                      
                         <div
-                        className="p__desc"
-                        dangerouslySetInnerHTML={{
-                            __html: html,
-                        }}
-                        />                             
+                        className="p__desc">
+                          <p dangerouslySetInnerHTML={{
+                              __html: html,
+                          }}
+                          /> 
+                        </div>                                                     
                         <div className="p__cta">
                           <Link to={to}>
                             <button>{read_more}</button>

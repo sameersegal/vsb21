@@ -5,7 +5,7 @@ import Container from './container';
 import Img from 'gatsby-image';
 
 const Container2 = styled(Container)`
-  height: 50%;
+  height: 70%;
 `
 
 const IQsWrapper = styled.div`
@@ -24,7 +24,7 @@ const IQsWrapper = styled.div`
 const IQBlockWrapper = styled.div`
   background: ${props => props.bg};
   @media screen and (min-width: ${props => props.theme.sizes.tablet}) {
-    height: 55rem;
+    height: 95rem;
   }
   @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
     padding-top: 4rem;
@@ -40,7 +40,7 @@ const IQBlockWrapper = styled.div`
     height: 100%;
     align-items: center;
     .right {
-      width: 50%;
+      width: 60%;
       .p__title {
         h3 {
         //   color: white;
@@ -55,7 +55,7 @@ const IQBlockWrapper = styled.div`
       .p__desc {
         p {
           margin-bottom: 1.5rem;
-          line-height: 1.5rem;
+          // line-height: 1.5rem;
           -webkit-column-count: 2;
           -moz-column-count: 2;
           column-count: 2;
@@ -92,7 +92,7 @@ const IQBlockWrapper = styled.div`
       }
     }
     .left {
-      width: 50%;
+      width: 40%;
     //   color: white;      
       }      
     }
@@ -124,10 +124,7 @@ const ImageQuote2 = ({title, image, author, date, html, caption}) => {
                     </div>                                                              
                 </div>
                 <div className="right">
-                    <div className="info">
-                        <div className="p__title">
-                            <h3>{title}</h3>
-                        </div>                                                              
+                    <div className="info">                        
                         <div
                         className="p__desc" dangerouslySetInnerHTML={{
                             __html: html,

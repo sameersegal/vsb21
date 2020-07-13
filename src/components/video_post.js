@@ -124,11 +124,12 @@ const ImagePost = ({title, poster, video, html, to, read_more}) => {
                             <h3>{title}</h3>
                         </div>                                      
                         <div
-                        className="p__desc"
-                        dangerouslySetInnerHTML={{
+                        className="p__desc">
+                          <p dangerouslySetInnerHTML={{
                             __html: html,
-                        }}
+                          }}
                         />                             
+                        </div>                        
                         <div className="p__cta">
                           <Link to={to}>
                             <button>{read_more}</button>

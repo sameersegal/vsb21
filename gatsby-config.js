@@ -7,7 +7,7 @@ module.exports = {
       twitter: `thevalleyschool`,
     },
     end_note: `
-    Although we cannot be together at the Valley for school’s birthday this year, no doubt we will each mark the occasion in our own way - planting a sapling, nurturing a tree, writing a poem, making a sketch, singing a song, or even eating a piece of mysore pak, something to remember our wonderland. Because there is some solace in knowing`,
+    Although we cannot be together at the Valley for school's birthday this year, no doubt we will each mark the occasion in our own way - planting a sapling, nurturing a tree, writing a poem, making a sketch, singing a song, or even eating a piece of mysore pak, something to remember our wonderland. Because there is some solace in knowing that the Valley is now wherever we are...`,
   },
   plugins: [
     {
