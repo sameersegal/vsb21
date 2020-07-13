@@ -9,7 +9,8 @@ const Theme = {
       grey: '#EAEAEA',
       greyDark: '#2B2B2B',
       black: '#212529',
-      white: '#FFFFFF'
+      white: '#FFFFFF',
+      darkGreen: '#4c4f24'
     },
     gradients: {
       red: 'linear-gradient(90deg, #EF412D, #4F2920)',

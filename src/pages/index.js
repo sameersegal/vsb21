@@ -10,12 +10,15 @@ import ImageQuoteBackground from "../components/image_quote_background"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
+import HeroBottom from "../components/bottom-hero"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
+  const endNote = data.site.siteMetadata.end_note
   const posts = data.allMarkdownRemark.edges
   const desktopImage = data.desktopImage
   const mobileImage = data.mobileImage
+  const bottomImage = data.bottomImage
 
   const links = []
   // posts.forEach(({node: {frontmatter: {title}, fields: {slug}}}) => {
@@ -100,6 +103,11 @@ const BlogIndex = ({ data, location }) => {
           </article>
         )
       })}
+      <HeroBottom
+        desktop={bottomImage.childImageSharp.fluid}
+        mobile={bottomImage.childImageSharp.fluid}
+        title={endNote}
+      />
     </Layout>
   )
 }
@@ -111,6 +119,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        end_note
       }
     }
     allMarkdownRemark(filter: {frontmatter: {section: {eq: "home"}}}, sort: {fields: frontmatter___priority, order: ASC}) {
@@ -155,6 +164,13 @@ export const pageQuery = graphql`
     mobileImage: file(absolutePath: { regex: "/home.jpg/" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+    bottomImage: file(absolutePath: { regex: "/bottom.jpg/" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }

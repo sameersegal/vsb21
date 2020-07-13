@@ -21,6 +21,7 @@ exports.createPages = async ({ graphql, actions }) => {
               frontmatter {
                 title
                 type
+                page_create
               }
             }
           }
@@ -41,10 +42,9 @@ exports.createPages = async ({ graphql, actions }) => {
     const next = index === 0 ? null : posts[index - 1].node
     const slug = post.node.fields.slug
     const {type, title} = post.node.frontmatter
+    const pageCreate = post.node.frontmatter.page_create || true
 
-    console.log(title, type)
-
-    if (type === "post" ) {
+    if (type === "post" && !pageCreate) {
       createPage({
         path: slug,
         component: postComponent,

@@ -7,6 +7,7 @@ type: "post"
 section: 'home'
 priority: 60
 read_more: "Read More"
+page_create: false
 ---
 
 ![1](./1.png)

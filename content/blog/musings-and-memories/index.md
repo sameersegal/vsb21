@@ -7,5 +7,6 @@ section: 'home'
 type: "post"
 priority: 70
 read_more: "Read More"
+page_create: false
 ---
 

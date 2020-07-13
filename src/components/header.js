@@ -227,7 +227,7 @@ export default function Header({ location, links }) {
           <StaticQuery
             query={graphql`
               query {
-                file(absolutePath: { regex: "/logo.jpeg/" }) {
+                file(absolutePath: { regex: "/logo.jpg/" }) {
                   childImageSharp {
                     fluid(maxWidth: 80) {
                       ...GatsbyImageSharpFluid_noBase64
