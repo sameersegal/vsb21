@@ -2,7 +2,7 @@
 title: Palki
 date: 2020-07-12
 type: image_2_col
-hero: ./palki_sketch.png
+hero: ./sketch.jpg
 section: home
 priority: 5
 author: Chandan

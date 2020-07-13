@@ -6,7 +6,7 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import ImageQuote from "../components/image_quote"
 import ImagePost from "../components/image_post"
 import ImageQuote2 from "../components/image_quote_2col"
-import ImageQuoteBackground from "../components/image_quote_background"
+import VideoPost from "../components/video_post"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
@@ -40,8 +40,8 @@ const BlogIndex = ({ data, location }) => {
         const title = node.frontmatter.title || node.fields.slug
         const isVideo = !!node.frontmatter.hero_video
         const isImageQuote2 = node.frontmatter.type === "image_3_col"
-        const isImageQuote = node.frontmatter.type === "image_2_col"
-        const isImageBackground = node.frontmatter.type === "image_background"
+        const isImageQuote = node.frontmatter.type === "image_2_col"        
+        const isVideoPost = node.frontmatter.type === "video"        
         const isPost = node.frontmatter.type === "post"
 
         return (
@@ -64,14 +64,6 @@ const BlogIndex = ({ data, location }) => {
                 author={node.frontmatter.author}                
               ></ImageQuote>
             }
-            {isImageBackground &&
-              <ImageQuoteBackground 
-                title={node.frontmatter.title}
-                image={node.frontmatter.hero} 
-                html={node.html}                 
-                author={node.frontmatter.author}                
-              ></ImageQuoteBackground>
-            }
             {isPost &&
               <ImagePost 
                 title={node.frontmatter.title}
@@ -81,23 +73,15 @@ const BlogIndex = ({ data, location }) => {
                 read_more={node.frontmatter.read_more}
               ></ImagePost>
             }
-            {!isImageQuote2 && !isImageQuote && !isImageBackground && !isPost &&
-              <header>
-                {/* <Link style={{ boxShadow: `none` }} to={node.fields.slug}>                                 */}
-                  {isVideo &&                 
-                    <video poster={node.frontmatter.hero.publicURL} autoPlay loop width="600" height="400">
-                      <source src={node.frontmatter.hero_video.publicURL} type="video/mp4"/>
-                    </video>                              
-                  }
-                  {!isVideo &&
-                    <div                    
-                    dangerouslySetInnerHTML={{
-                        __html: node.html,
-                    }}
-                    />  
-                  } 
-                {/* </Link>                                 */}
-              </header> 
+            {isVideoPost &&
+              <VideoPost 
+                title={node.frontmatter.title}
+                poster={node.frontmatter.hero.publicURL} 
+                video={node.frontmatter.hero_video.publicURL}
+                html={node.frontmatter.description}                 
+                to={node.fields.slug}                
+                read_more={node.frontmatter.read_more}
+              ></VideoPost>
             }       
             <hr />                
           </article>

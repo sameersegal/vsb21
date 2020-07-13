@@ -57,7 +57,7 @@ const HeroImg = styled(Img)`
     object-fit: 'cover' !important;
     object-position: '50% 50%' !important;
   }
-  opacity: 0.6
+  opacity: 0.4
 `;
 
 const MobileHeroImg = styled(Img)`
