@@ -24,7 +24,7 @@ const IQsWrapper = styled.div`
 const IQBlockWrapper = styled.div`
   background: ${props => props.bg};
   @media screen and (min-width: ${props => props.theme.sizes.tablet}) {
-    height: 75rem;
+    height: 55rem;
   }
   @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
     padding-top: 4rem;
@@ -112,11 +112,11 @@ const IQImg = styled(Img)`
 
 const ImageQuote2 = ({title, image, author, date, html, caption}) => {
     return (
-        <IQBlockWrapper bg="#DDDDDD">
+        <IQBlockWrapper bg="#FFFFFF">
             <Container2>
                 <div className="left">
                     <IQImg
-                        backgroundColor="#DDDDDD"
+                        backgroundColor="#FFFFFF"
                         fluid={image.childImageSharp.fluid}
                     />
                     <div className="p__title">

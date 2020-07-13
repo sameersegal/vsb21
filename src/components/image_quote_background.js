@@ -106,10 +106,10 @@ const IQText= styled.div`
 
 const ImageQuote = ({title, image, html, author}) => {
     return (
-        <IQBlockWrapper bg="#DDDDDD">
+        <IQBlockWrapper bg="#FFFFFF">
             <Container>                
               <IQImg
-                  backgroundColor="#DDDDDD"
+                  backgroundColor="#FFFFFF"
                   fluid={image.childImageSharp.fluid}
               />      
               <IQText

@@ -86,8 +86,19 @@ const IQBlockWrapper = styled.div`
             transition: all 0.3s ease;
             background: white;
           }
+        }        
+      }  
+      .p__cta {
+        margin-top: 2.5rem;
+        button {
+          background: transparent;
+          border: 0.1rem solid black;
+          height: 6rem;
+          width: 210px;
+          max-width: 100%;
+          color: black;          
         }
-      }      
+      }    
     }
   }
 `;
@@ -105,7 +116,7 @@ const IQImg = styled(Img)`
 
 const ImagePost = ({title, image, html, to, read_more}) => {
     return (
-        <IQBlockWrapper bg="#DDDDDD">
+        <IQBlockWrapper bg="#FFFFFF">
             <Container>
                 <div className="left">                  
                     <div className="info">                        
@@ -117,13 +128,17 @@ const ImagePost = ({title, image, html, to, read_more}) => {
                         dangerouslySetInnerHTML={{
                             __html: html,
                         }}
-                        />     
-                        <Link to={to}>{read_more}</Link>                     
+                        />                             
+                        <div className="p__cta">
+                          <Link to={to}>
+                            <button>{read_more}</button>
+                          </Link>
+                        </div>                     
                     </div>
                 </div>
                 <div className="right">
                     <IQImg
-                        backgroundColor="#DDDDDD"
+                        backgroundColor="#FFFFFF"
                         fluid={image.childImageSharp.fluid}
                     />
                 </div>
