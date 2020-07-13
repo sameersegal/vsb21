@@ -1,8 +1,8 @@
 ---
-title: RTA Journal
+title: 'RTA Journal'
 date: "2020-07-01T22:12:03.284Z"
-description: "A moving collection by the outgoing Class 12"
-hero: "./images/1.png"
+description: "Birthday Letters from the Class of 2020"
+hero: "./intro/cover.png"
 type: "post"
 section: 'home'
 priority: 60
