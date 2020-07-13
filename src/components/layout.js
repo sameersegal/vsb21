@@ -1,7 +1,7 @@
 import React from "react"
 import styled, { ThemeProvider } from 'styled-components';
 
-import GlobalStyle from '../styles/Global';
+import GlobalStyle from '../styles/global';
 import GlobalFonts from '../styles/fonts';
 import Theme from '../styles/theme';
 
