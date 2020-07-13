@@ -6,8 +6,8 @@ import Container from './container';
 import Button from './button';
 
 const HeroWrapper = styled.div`
-  margin-top: -80px;
-  position: relative !important;
+  // margin-top: -80px;
+  // position: relative !important;
   height: 700px;
   background: ${props => props.theme.colors.white};
   @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
@@ -15,7 +15,7 @@ const HeroWrapper = styled.div`
     padding-top: 100px;
   }
   section {
-    align-items: flex-end;
+    align-items: center;
     position: relative;
     z-index: 100;
     .content {
@@ -23,7 +23,7 @@ const HeroWrapper = styled.div`
       z-index: 100;
       width: 100%;
       // margin-left: 2rem;
-      margin-bottom: 2rem;
+      // margin-bottom: 2rem;
       @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
         width: 100%;
         margin-left: 0;
@@ -32,13 +32,13 @@ const HeroWrapper = styled.div`
         }
       }
       h2 {
-        
+        margin: auto 0;        
         color: ${props => props.theme.colors.darkGreen} !important;         
         font-family: ${props => props.theme.fonts.heading} !important;
         font-size: 3rem;
         line-height: 6rem;
-        margin-bottom: 2rem;
-        margin-top: 0.5rem;
+        // margin-bottom: 2rem;
+        // margin-top: 0.5rem;
       }      
     }
   }
