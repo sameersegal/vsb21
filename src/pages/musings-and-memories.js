@@ -6,14 +6,14 @@ import styled from 'styled-components';
 import Layout from "../components/layout"
 import Container from "../components/container"
 import SEO from "../components/seo"
-// import { rhythm } from "../utils/typography"
 
-const Container2 = styled(Container)`
-  max-width: 1400px;
-  width: 100%;
-`
+// const Container2 = styled(Container)`
+//   max-width: 1400px;
+//   width: 100%;
+// `
 
-const BlogIndex = ({ data, location }) => {
+const MAMIndex = ({ data, location }) => {
+  console.log(data)
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
 
@@ -22,7 +22,7 @@ const BlogIndex = ({ data, location }) => {
     const s = "/musings-and-memories/#" + slug.split("/")[2]
     links.push({'link':s, title, 'type': 'anchor'})
   })
-  links.push({'link':'/rta-journal', 'title': 'RTA Journal'})
+  // links.push({'link':'/rta-journal', 'title': 'RTA Journal'})
 
   return (
     <Layout location={location} title={siteTitle} links={links}>
@@ -41,7 +41,7 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
+export default MAMIndex
 
 export const pageQuery = graphql`
   query MAMList {

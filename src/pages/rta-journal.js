@@ -14,7 +14,7 @@ const RTAIndex = ({ data, location }) => {
     const s = "/rta-journal/#" + slug.split("/")[2]
     links.push({'link':s, title, 'type': 'anchor'})
   })
-  links.push({'link':'/musings-and-memories', 'title': 'Musings & Memories'})
+  // links.push({'link':'/musings-and-memories', 'title': 'Musings & Memories'})
 
   return (
     <Layout location={location} title={siteTitle} links={links}>

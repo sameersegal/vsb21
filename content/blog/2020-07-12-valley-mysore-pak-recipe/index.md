@@ -8,6 +8,7 @@ section: home
 type: post
 priority: 50
 author: Janani
+page_create: true
 ---
 ▹ Vegetarian, gluten-free, Valley-special\
 

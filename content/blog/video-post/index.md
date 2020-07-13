@@ -8,6 +8,7 @@ hero_video: "./video-one.mp4"
 read_more: "Watch All"
 section: 'home'
 priority: 50
+page_create: true
 ---
 
 # Lots of Videos

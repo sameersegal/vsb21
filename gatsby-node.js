@@ -42,9 +42,9 @@ exports.createPages = async ({ graphql, actions }) => {
     const next = index === 0 ? null : posts[index - 1].node
     const slug = post.node.fields.slug
     const {type, title} = post.node.frontmatter
-    const pageCreate = !!post.node.frontmatter.page_create 
+    const pageCreate = !!post.node.frontmatter.page_create
 
-    console.log(type, title, pageCreate)
+    console.log(type, title, pageCreate, typeof(pageCreate))
 
     if ((type === "post" || type === "video") && pageCreate) {
       createPage({
