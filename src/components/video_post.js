@@ -138,7 +138,7 @@ const ImagePost = ({title, poster, video, html, to, read_more}) => {
                     </div>
                 </div>
                 <div className="right">
-                    <video poster={poster} autoPlay loop playsinline width="600" height="400">
+                    <video poster={poster} autoPlay loop playsinline muted width="600" height="400">
                       <source src={video} type="video/mp4"/>
                     </video>
                 </div>
