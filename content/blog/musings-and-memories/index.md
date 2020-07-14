@@ -10,3 +10,9 @@ read_more: "Read More"
 page_create: false
 ---
 
+![Intro](./intro/8.png)
+
+<!-- [Read More](/musings-and-memories) -->
+<center>
+    <a href="/musings-and-memories">Read More</a>
+</center>

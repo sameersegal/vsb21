@@ -82,12 +82,15 @@ const HeaderWrapper = styled.nav`
         padding: 0.2rem 0.4rem;
         z-index: 10;
         &:hover {
-          color: white;
+          // color: white;
           &::before {
             height: 100%;
             width: 100%;
             opacity: 1;
           }
+          transition: all 0.3s ease;
+          font-size: 2.5rem;
+          font-weight: bold;
         }
         &:before {
           z-index: -1;
@@ -99,7 +102,7 @@ const HeaderWrapper = styled.nav`
           left: 0;
           opacity: 1;
           transition: all 0.3s ease;
-          background: ${props => props.theme.gradients.red};
+          // background: ${props => props.theme.gradients.red};
         }
       }
       .divider {
@@ -147,7 +150,7 @@ const HeaderWrapper = styled.nav`
             left: 0;
             width: 100%;
             height: 0.2rem;
-            background: ${props => props.theme.gradients.red};
+            // background: ${props => props.theme.gradients.red};
           }
         }
       }
@@ -227,7 +230,7 @@ export default function Header({ location, links }) {
           <StaticQuery
             query={graphql`
               query {
-                file(absolutePath: { regex: "/logo-wo-bg.jpg/" }) {
+                file(absolutePath: { regex: "/logo.jpg/" }) {
                   childImageSharp {
                     fluid(maxWidth: 80) {
                       ...GatsbyImageSharpFluid_noBase64
