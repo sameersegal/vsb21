@@ -10,3 +10,5 @@ read_more: "Read More"
 page_create: false
 ---
 
+![Intro](./intro/8.png)
+

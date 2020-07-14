@@ -10,7 +10,9 @@ caption: "twilight in the valley"
 author: "Dr Satish Inamdar"
 ---
 
-# Dear Valley
+![Poem](./2.png)
+
+<!-- # Dear Valley
 
 Do you know it's your birthday!<br/>
 I know you laugh at all such thoughts.<br/>
@@ -46,4 +48,4 @@ and the seeds unborn.<br/>
 Let’s pray for that sacredness<br/>
 for which you were found.<br/>
 Oh! Valley<br/>
-Bless Us All Now.<br/>
+Bless Us All Now.<br/> -->

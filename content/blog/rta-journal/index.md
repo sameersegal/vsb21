@@ -10,4 +10,4 @@ read_more: "Read More"
 page_create: false
 ---
 
-![1](./1.png)
+![1](./intro/9.png)
