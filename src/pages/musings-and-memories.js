@@ -18,10 +18,13 @@ const MAMIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
 
   const links = []
-  posts.forEach(({node: {frontmatter: {title}, fields: {slug}}}) => {
-    const s = "/musings-and-memories/#" + slug.split("/")[2]
-    links.push({'link':s, title, 'type': 'anchor'})
+  posts.forEach(({node: {frontmatter: {title}, fields: {slug}}}, i) => {
+    if(i > 0) {
+      const s = "/musings-and-memories/#" + slug.split("/")[2]    
+      links.push({'link':s, title, 'type': 'anchor'})
+    }    
   })
+  links.pop()
   // links.push({'link':'/rta-journal', 'title': 'RTA Journal'})
 
   return (
