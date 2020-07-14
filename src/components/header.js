@@ -8,8 +8,12 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 import Container from './container';
 
+const Container2 = styled(Container)`
+  background: white;
+`
+
 const HeaderWrapper = styled.nav`
-  background: transparent;
+  // background: transparent;
   position: fixed;
   width: 100%;
   top: 0;
@@ -71,8 +75,8 @@ const HeaderWrapper = styled.nav`
       display: none;
       a {
         color: ${props => props.theme.colors.black};
-        font-size: 1.1 rem;
-        line-height: 2.8rem;
+        font-size: 1.1rem;
+        // line-height: 2.8rem;
         // text-transform: uppercase;
         margin-left: 1.5rem;
         // font-size: 1.4rem;
@@ -82,12 +86,15 @@ const HeaderWrapper = styled.nav`
         padding: 0.2rem 0.4rem;
         z-index: 10;
         &:hover {
-          color: white;
+          // color: white;
           &::before {
             height: 100%;
             width: 100%;
             opacity: 1;
           }
+          transition: all 0.3s ease;
+          font-weight: bold;
+          font-size: 1.5rem;
         }
         &:before {
           z-index: -1;
@@ -99,7 +106,9 @@ const HeaderWrapper = styled.nav`
           left: 0;
           opacity: 1;
           transition: all 0.3s ease;
-          background: ${props => props.theme.gradients.red};
+          font-weight: bold;
+          font-size: 2.5rem;
+          // background: ${props => props.theme.gradients.red};
         }
       }
       .divider {
@@ -117,9 +126,9 @@ const HeaderWrapper = styled.nav`
       }
     }
     .nav-mm {
-      font-size: 1.4rem;
-      line-height: 2.8rem;
-      text-transform: uppercase;
+      font-size: 1.1rem;
+      // line-height: 2.8rem;
+      // text-transform: uppercase;
       transform: translateX(${props => (props.open ? '0%' : '100%')});
       transition: transform 0.3s ease;
       display: flex;
@@ -147,7 +156,9 @@ const HeaderWrapper = styled.nav`
             left: 0;
             width: 100%;
             height: 0.2rem;
-            background: ${props => props.theme.gradients.red};
+            font-weight: bold;
+            font-size: 1.5rem;
+            // background: ${props => props.theme.gradients.red};
           }
         }
       }
@@ -222,7 +233,7 @@ export default function Header({ location, links }) {
     <HeaderWrapper triggered={scrolled} open={open}>
       <HeaderMenuMask triggered={open} />
       <HeaderScrolledMask triggered={scrolled} />
-      <Container>
+      <Container2>
         <div className="logo">
           <StaticQuery
             query={graphql`
@@ -256,7 +267,7 @@ export default function Header({ location, links }) {
           </button>
         </div>
         <div className="nav-mm">{renderLinks()}</div>
-      </Container>
+      </Container2>
     </HeaderWrapper>
   );
 }

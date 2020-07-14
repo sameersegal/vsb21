@@ -6,7 +6,7 @@ read_more: "See the Recipe"
 hero: ./mysore-pak.jpg
 section: home
 type: post
-priority: 50
+priority: 15
 author: Janani
 page_create: true
 ---

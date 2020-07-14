@@ -46,10 +46,10 @@ const IQBlockWrapper = styled.div`
     .right {
       width: 100%;
       .p__title {
-        h3 {
+        h4 {
         //   color: white;
           font-family: ${props => props.theme.fonts.heading} !important;
-          font-weight: 800;
+          // font-weight: 800;
           // font-size: 2rem;
           // line-height: 6rem;
           // letter-spacing: 0.3rem;
@@ -107,7 +107,7 @@ const ImageQuote2 = ({title, image, author, date, html, caption}) => {
                         fluid={image.childImageSharp.fluid}
                     />
                     <div className="p__title">
-                            <h3>{caption}</h3>
+                            <h4>{caption}</h4>
                     </div>                                                              
                 </div>
                 <div className="right">

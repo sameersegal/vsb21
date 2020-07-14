@@ -22,7 +22,7 @@ const IQsWrapper = styled.div`
 const IQBlockWrapper = styled.div`
   background: ${props => props.bg};  
   @media screen and (min-width: ${props => props.theme.sizes.tablet}) {
-    height: 35rem;
+    height: 65rem;
   }
   @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
     padding-top: 4rem;
@@ -36,23 +36,25 @@ const IQBlockWrapper = styled.div`
   }
   section {
     // height: 100%;
-    width: 900px;
+    // width: 900px;
     max-width: 100%;
     align-items: center;
     .right {
-      width: 25%;
+      width: 35%;      
+      height: 100%;
+      display: flex;
     }
     .left {
-      width: 75%;
+      width: 65%;
     //   color: white;
       .p__title {
-        h3 {
+        h2 {
         //   color: white;
-          font-family: ${props => props.theme.fonts.heading} !important;
+          // font-family: ${props => props.theme.fonts.heading} !important;
           font-weight: 800;
-          font-size: 2rem;
-          line-height: 6rem;
-          letter-spacing: 0.3rem;
+          // font-size: 2rem;
+          // line-height: 6rem;
+          // letter-spacing: 0.3rem;
           margin-bottom: 1.5rem;
         }
       }
@@ -100,6 +102,16 @@ const IQBlockWrapper = styled.div`
         }
       }    
     }
+    .left-block1 { 
+      @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
+        display: none;
+      }
+    }
+    .left-block2 { 
+      @media screen and (min-width: ${props => props.theme.sizes.tablet}) {
+        display: none;
+      }
+    }
   }
 `;
 
@@ -110,7 +122,7 @@ const IQImg = styled(Img)`
     margin-top: 4rem;
   }
   @media screen and (min-width: ${props => props.theme.sizes.tablet}) {
-    margin-bottom: -7.5rem;
+    // margin-bottom: -7.5rem;
   }
 `;
 
@@ -121,20 +133,22 @@ const ImagePost = ({title, image, html, to, read_more}) => {
                 <div className="left">                  
                     <div className="info">                        
                         <div className="p__title">
-                            <h3>{title}</h3>
-                        </div>                                      
-                        <div
-                        className="p__desc">
-                          <p dangerouslySetInnerHTML={{
-                              __html: html,
-                          }}
-                          /> 
-                        </div>                                                     
-                        <div className="p__cta">
-                          <Link to={to}>
-                            <button>{read_more}</button>
-                          </Link>
-                        </div>                     
+                            <h2>{title}</h2>
+                        </div>  
+                        <div class="left-block1">
+                          <div
+                          className="p__desc">
+                            <p dangerouslySetInnerHTML={{
+                                __html: html,
+                            }}
+                            /> 
+                          </div>                                                     
+                          <div className="p__cta">
+                            <Link to={to}>
+                              <button>{read_more}</button>
+                            </Link>
+                          </div> 
+                        </div>                      
                     </div>
                 </div>
                 <div className="right">
@@ -142,6 +156,24 @@ const ImagePost = ({title, image, html, to, read_more}) => {
                         backgroundColor="#FFFFFF"
                         fluid={image.childImageSharp.fluid}
                     />
+                </div>
+                <div className="left-block2 left">                  
+                    <div className="info">                                                
+                        <div class="">
+                          <div
+                          className="p__desc">
+                            <p dangerouslySetInnerHTML={{
+                                __html: html,
+                            }}
+                            /> 
+                          </div>                                                     
+                          <div className="p__cta">
+                            <Link to={to}>
+                              <button>{read_more}</button>
+                            </Link>
+                          </div> 
+                        </div>                      
+                    </div>
                 </div>
             </Container>
         </IQBlockWrapper>

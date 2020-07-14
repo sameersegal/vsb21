@@ -8,7 +8,7 @@ import Button from './button';
 const HeroWrapper = styled.div`
   // margin-top: -80px;
   // position: relative !important;
-  height: 700px;
+  // height: 700px;
   background: ${props => props.theme.colors.white};
   // @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
   //   height: unset;
@@ -18,7 +18,7 @@ const HeroWrapper = styled.div`
     align-items: center;
     position: relative;
     z-index: 100;
-    .content {
+    .content {      
       position: relative;
       z-index: 100;
       width: 100%;
@@ -31,7 +31,7 @@ const HeroWrapper = styled.div`
       //     width: 100%;
       //   }
       // }
-      h2 {
+      h3 {
         // margin: auto 0;        
         color: ${props => props.theme.colors.darkGreen} !important;         
         // font-family: ${props => props.theme.fonts.heading} !important;
@@ -71,7 +71,7 @@ const Hero = props => (
   <HeroWrapper>
     <Container>
       <div className="content">        
-        <h2>{props.title}</h2>                
+        <h3>{props.title}</h3>                
         {/* <MobileHeroImg backgroundColor={'#FFFFFF'} fluid={props.mobile} /> */}
       </div>
       <HeroImg backgroundColor={'#FFFFFF'} fluid={props.desktop} />
