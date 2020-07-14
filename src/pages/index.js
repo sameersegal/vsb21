@@ -26,7 +26,7 @@ const RTAIndex = ({ data, location }) => {
   // })
   links.push({'link':'/musings-and-memories', 'title': 'Musings & Memories'})
   links.push({'link':'/rta-journal', 'title': 'Birthday Letters'})
-  links.push({'link':'/valley-mysore-pak-recipe', 'title': 'Mysore Pak'})
+  links.push({'link':'/mysore-pak-recipe', 'title': 'Mysore Pak'})
 
   return (
     <Layout location={location} title={siteTitle} links={links}>
