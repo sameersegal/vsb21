@@ -14,7 +14,7 @@ const IQsWrapper = styled.div`
   section {
     .title {
       h2 {
-        color: ${props => props.theme.colors.red};
+        // color: ${props => props.theme.colors.red};
         margin-bottom: 2rem;
       }
     }
@@ -49,7 +49,7 @@ const IQBlockWrapper = styled.div`
           font-size: 2rem;
           line-height: 6rem;
           letter-spacing: 0.3rem;
-          margin-bottom: 1.5rem;
+          // margin-bottom: 0rem;
         }
       }
       .p__desc {
@@ -61,7 +61,16 @@ const IQBlockWrapper = styled.div`
           column-count: 2;
           -webkit-column-gap: 10px;
           -moz-column-gap: 10px;
-          column-gap: 10px;          
+          column-gap: 10px;    
+          
+          @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
+            -webkit-column-count: unset;
+            -moz-column-count: unset;
+            column-count: unset;
+            -webkit-column-gap: 0px;
+            -moz-column-gap: 0px;
+            column-gap: 0px;    
+          }
         }
         a {
           position: relative;
