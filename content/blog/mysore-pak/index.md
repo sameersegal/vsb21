@@ -12,7 +12,10 @@ author: Janani
 
 ![Recipe](./10.png)
 
-[Click here to see the recipe](/mysore-pak-recipe)
+<center>
+    <a href="/mysore-pak-recipe">Click here to see the Recipe</a>
+</center>
+<!-- [Click here to see the recipe](/mysore-pak-recipe) -->
 
 <!-- ▹ Vegetarian, gluten-free, Valley-special\
 

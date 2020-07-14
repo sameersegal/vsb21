@@ -8,11 +8,11 @@ hero_video:
     - { src: "./Bambi.mp4", type: "video/mp4"}
 read_more: "Watch All"
 section: 'home'
-priority: 24
-page_create: true
+priority: 50
 ---
 
-
-<video poster="./Bambi.png" autoplay loop playsinline muted width="600" height="400">
-    <source src="./Bambi.mp4" type="video/mp4">
-</video>
+<center>
+    <video poster="./Bambi.png" autoplay loop playsinline muted width="600" height="400">
+        <source src="./Bambi.mp4" type="video/mp4">
+    </video>
+</center>

@@ -9,14 +9,15 @@ hero_video:
     - { src: "./Baby monkey.webm", type: "video/webm"}
 read_more: "Watch All"
 section: 'home'
-priority: 50
+priority: 1000
 page_create: true
 ---
 
-
-<video poster="./Hubli and Jumpy.png" autoplay loop playsinline muted width="600" height="400">
-    <source src="./Hubli and Jumpy.mp4" type="video/mp4">
-</video>
+<center>
+    <video poster="./Hubli and Jumpy.png" autoplay loop playsinline muted width="600" height="400">
+        <source src="./Hubli and Jumpy.mp4" type="video/mp4">
+    </video>
+</center>
 
 <!-- <br/>
 

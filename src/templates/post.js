@@ -18,7 +18,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const links = []
   links.push({'link':'/rta-journal', 'title': 'Birthday Letters'})
   links.push({'link':'/musings-and-memories', 'title': 'Musings & Memories'})
-  links.push({'link':'/mysore-pak/recipe', 'title': 'Valley Mysore Pak'})
+  links.push({'link':'/mysore-pak/recipe', 'title': 'Mysore Pak'})
 
 
   return (
