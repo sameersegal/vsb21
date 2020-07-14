@@ -6,6 +6,10 @@ import Img from 'gatsby-image';
 
 const Container2 = styled(Container)`
   height: 70%;
+  // padding: 0;
+  @media (max-width: ${props => props.theme.sizes.mobile}) {
+    padding: 0 0px;
+  }
 `
 
 const IQsWrapper = styled.div`
@@ -27,7 +31,7 @@ const IQBlockWrapper = styled.div`
     height: 95rem;
   }
   @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
-    padding-top: 4rem;
+    // padding-top: 4rem;
     section {
       flex-wrap: wrap;
       .left,
@@ -71,38 +75,11 @@ const IQBlockWrapper = styled.div`
             -moz-column-gap: 0px;
             column-gap: 0px;    
           }
-        }
-        a {
-          position: relative;
-          z-index: 5;
-          text-decoration: none;
-          color: ${props => props.bg};
-          transition: all 0.3s ease;
-          padding: 0 0.5rem;
-          &:hover {
-            color: white;
-            &:before {
-              height: 1px;
-            }
-          }
-          &:before {
-            z-index: -5;
-            content: '';
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            bottom: -1px;
-            left: 0;
-            opacity: 1;
-            transition: all 0.3s ease;
-            background: white;
-          }
-        }
+        }        
       }
     }
     .left {
-      width: 40%;
-    //   color: white;      
+      width: 100%;    
       }      
     }
   }
