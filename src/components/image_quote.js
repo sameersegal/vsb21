@@ -5,6 +5,11 @@ import styled from 'styled-components';
 import Container from './container';
 import Img from 'gatsby-image';
 
+const Container2 = styled(Container)`
+  padding-top: 20px;
+  padding-bottom: 20px;
+`
+
 const IQsWrapper = styled.div`
   background: white;
   margin-bottom: 10rem;
@@ -35,23 +40,25 @@ const IQBlockWrapper = styled.div`
   }
   section {
     // height: 100%;
-    width: 900px;
+    // width: 900px;
     max-width: 100%;
     align-items: center;
     .right {
-      width: 25%;
+      width: 35%;
+      height: 100%;
+      display: flex;
     }
     .left {
-      width: 75%;
+      width: 65%;
     //   color: white;
       .p__title {
-        h3 {
+        h2 {
         //   color: white;
-          font-family: ${props => props.theme.fonts.heading} !important;
+          // font-family: ${props => props.theme.fonts.heading} !important;
           font-weight: 800;
-          font-size: 2rem;
-          line-height: 6rem;
-          letter-spacing: 0.3rem;
+          // font-size: 2rem;
+          // line-height: 6rem;
+          // letter-spacing: 0.3rem;
           margin-bottom: 1.5rem;
         }
       }
@@ -59,53 +66,27 @@ const IQBlockWrapper = styled.div`
         p {
           margin-bottom: 1.5rem;
           // line-height: 1.5rem;
-        }
-        a {
-          position: relative;
-          z-index: 5;
-          text-decoration: none;
-          color: ${props => props.bg};
-          transition: all 0.3s ease;
-          padding: 0 0.5rem;
-          &:hover {
-            color: white;
-            &:before {
-              height: 1px;
-            }
-          }
-          &:before {
-            z-index: -5;
-            content: '';
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            bottom: -1px;
-            left: 0;
-            opacity: 1;
-            transition: all 0.3s ease;
-            background: white;
-          }
-        }
+        }        
       }      
     }
   }
 `;
 
 const IQImg = styled(Img)`
-  width: 300px !important;
+  width: 500px !important;
   max-width: 100% !important;
   @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
     margin-top: 4rem;
   }
   @media screen and (min-width: ${props => props.theme.sizes.tablet}) {
-    margin-bottom: -7.5rem;
+    // margin-bottom: -7.5rem;
   }
 `;
 
 const ImageQuote = ({title, image, html, author}) => {
     return (
         <IQBlockWrapper bg="#FFFFFF">
-            <Container>
+            <Container2>
                 <div className="left">
                     <div className="info">                        
                         <div
@@ -115,7 +96,7 @@ const ImageQuote = ({title, image, html, author}) => {
                         }}
                         />  
                         <div className="p__title">
-                            <h3>{author}</h3>
+                            <h2>{author}</h2>
                         </div>                                      
                     </div>
                 </div>
@@ -125,7 +106,7 @@ const ImageQuote = ({title, image, html, author}) => {
                         fluid={image.childImageSharp.fluid}
                     />
                 </div>
-            </Container>
+            </Container2>
         </IQBlockWrapper>
     )
 }

@@ -138,7 +138,7 @@ const ImagePost = ({title, poster, video, html, to, read_more}) => {
                     </div>
                 </div>                
                 <div className="right">
-                    <video poster={poster.publicURL} autoPlay loop muted playsInline controls="true">
+                    <video poster={poster.publicURL} autoPlay loop muted playsInline controls={true}>
                       {video.map(({src, type}) => {
                         return (
                           <source key={type} src={src.publicURL} type={type}/>  

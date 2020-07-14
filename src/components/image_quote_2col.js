@@ -28,7 +28,7 @@ const IQsWrapper = styled.div`
 const IQBlockWrapper = styled.div`
   background: ${props => props.bg};
   @media screen and (min-width: ${props => props.theme.sizes.tablet}) {
-    height: 95rem;
+    height: 65rem;
   }
   @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
     // padding-top: 4rem;
@@ -44,22 +44,23 @@ const IQBlockWrapper = styled.div`
     height: 100%;
     align-items: center;
     .right {
-      width: 60%;
+      width: 100%;
       .p__title {
         h3 {
         //   color: white;
           font-family: ${props => props.theme.fonts.heading} !important;
           font-weight: 800;
-          font-size: 2rem;
-          line-height: 6rem;
-          letter-spacing: 0.3rem;
+          // font-size: 2rem;
+          // line-height: 6rem;
+          // letter-spacing: 0.3rem;
           // margin-bottom: 0rem;
         }
       }
       .p__desc {
         p {
           margin-bottom: 1.5rem;
-          // line-height: 1.5rem;
+          font-size: 1.5rem;
+          line-height: 1.8rem;
           -webkit-column-count: 2;
           -moz-column-count: 2;
           column-count: 2;
@@ -118,7 +119,7 @@ const ImageQuote2 = ({title, image, author, date, html, caption}) => {
                         />                                                                        
                     </div>
                     <div className="p__title">
-                        <h3>{author}</h3>
+                        <h2>{author}</h2>
                     </div>               
                     <div>
                         {date}
