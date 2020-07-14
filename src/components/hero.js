@@ -34,8 +34,8 @@ const HeroWrapper = styled.div`
       h2 {
         text-align: center;
         color: ${props => props.theme.colors.white} !important;                 
-        font-size: 10rem;
-        line-height: 16rem;
+        font-size: 5rem;
+        line-height: 8rem;
         margin-bottom: 10rem;
         margin-top: 0.5rem;
       }      
