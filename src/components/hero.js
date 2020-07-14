@@ -10,10 +10,10 @@ const HeroWrapper = styled.div`
   position: relative !important;
   height: 700px;
   background: ${props => props.theme.colors.white};
-  @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
-    height: unset;
-    padding-top: 100px;
-  }
+  // @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
+  //   height: unset;
+  //   padding-top: 100px;
+  // }
   section {
     align-items: flex-end;
     position: relative;
@@ -24,20 +24,19 @@ const HeroWrapper = styled.div`
       width: 100%;
       // margin-left: 2rem;
       margin-bottom: 2rem;
-      @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
-        width: 100%;
-        margin-left: 0;
-        button {
-          width: 100%;
-        }
-      }
+      // @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
+      //   width: 100%;
+      //   margin-left: 0;
+      //   button {
+      //     width: 100%;
+      //   }
+      // }
       h2 {
         text-align: center;
-        color: ${props => props.theme.colors.white} !important;         
-        font-family: ${props => props.theme.fonts.heading} !important;
-        font-size: 6rem;
-        line-height: 6rem;
-        margin-bottom: 2rem;
+        color: ${props => props.theme.colors.white} !important;                 
+        font-size: 10rem;
+        line-height: 16rem;
+        margin-bottom: 10rem;
         margin-top: 0.5rem;
       }      
     }
@@ -50,9 +49,9 @@ const HeroImg = styled(Img)`
   width: 100%;
   z-index: 50;
   height: 700px;
-  @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
-    display: none;
-  }
+  // @media screen and (max-width: ${props => props.theme.sizes.tablet}) {
+  //   display: none;
+  // }
   & > img {
     object-fit: 'cover' !important;
     object-position: '50% 50%' !important;
@@ -71,7 +70,7 @@ const Hero = props => (
     <Container>
       <div className="content">        
         <h2>{props.title}</h2>                
-        <MobileHeroImg backgroundColor={'#FFFFFF'} fluid={props.mobile} />
+        {/* <MobileHeroImg backgroundColor={'#FFFFFF'} fluid={props.mobile} /> */}
       </div>
       <HeroImg backgroundColor={'#FFFFFF'} fluid={props.desktop} />
     </Container>
