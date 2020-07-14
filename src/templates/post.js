@@ -16,8 +16,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   
   const links = []
-  links.push({'link':'/rta-journal', 'title': 'RTA Journal'})
+  links.push({'link':'/rta-journal', 'title': 'Birthday Letters'})
   links.push({'link':'/musings-and-memories', 'title': 'Musings & Memories'})
+  links.push({'link':'/mysore-pak/recipe', 'title': 'Valley Mysore Pak'})
 
 
   return (

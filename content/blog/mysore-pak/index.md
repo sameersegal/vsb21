@@ -8,10 +8,11 @@ section: home
 type: post
 priority: 900
 author: Janani
-page_create: true
 ---
 
 ![Recipe](./10.png)
+
+[Click here to see the recipe](/mysore-pak-recipe)
 
 <!-- ▹ Vegetarian, gluten-free, Valley-special\
 

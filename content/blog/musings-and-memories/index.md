@@ -12,3 +12,4 @@ page_create: false
 
 ![Intro](./intro/8.png)
 
+[Read More](/musings-and-memories)

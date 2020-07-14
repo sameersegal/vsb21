@@ -11,3 +11,11 @@ page_create: false
 ---
 
 ![1](./intro/9.png)
+
+[Read More](/rta-journal)
+
+<!-- import Button from "../components/button"
+
+<Button link="/rta-journal" text="Read More" type="link">
+</Button>
+ -->
