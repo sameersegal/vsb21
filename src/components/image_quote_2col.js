@@ -5,7 +5,7 @@ import Container from './container';
 import Img from 'gatsby-image';
 
 const Container2 = styled(Container)`
-  height: 70%;
+  // height: 70%;
   // padding: 0;
   @media (max-width: ${props => props.theme.sizes.mobile}) {
     padding: 0 0px;
