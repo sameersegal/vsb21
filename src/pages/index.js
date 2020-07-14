@@ -76,8 +76,8 @@ const BlogIndex = ({ data, location }) => {
             {isVideoPost &&
               <VideoPost 
                 title={node.frontmatter.title}
-                poster={node.frontmatter.hero.publicURL} 
-                video={node.frontmatter.hero_video.publicURL}
+                poster={node.frontmatter.hero} 
+                video={node.frontmatter.hero_video}
                 html={node.frontmatter.description}                 
                 to={node.fields.slug}                
                 read_more={node.frontmatter.read_more}
@@ -114,7 +114,10 @@ export const pageQuery = graphql`
             description
             date(formatString: "MMMM DD, YYYY")
             hero_video {
-              publicURL
+              src {
+                publicURL
+              }
+              type
             }
             hero {
               publicURL
