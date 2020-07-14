@@ -13,7 +13,7 @@ author: Janani
 ![Recipe](./10.png)
 
 <center>
-    <a href="/mysore-pak-recipe">Click here to see the Recipe</a>
+    <a href="/mysore-pak-recipe">Recipe Here</a>
 </center>
 <!-- [Click here to see the recipe](/mysore-pak-recipe) -->
 

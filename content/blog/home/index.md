@@ -8,5 +8,4 @@ priority: 0
 author: Sukalpo
 type: 'image_2_col'
 ---
-
 ![Home](./1.png)
