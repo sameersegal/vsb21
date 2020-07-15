@@ -5,6 +5,6 @@ type: image_2_col
 hero: 3.png
 section: home
 priority: 4
-author: Krishmurti
+author: Krishnamurti
 ---
 ![Krishnamurti](3.png)
