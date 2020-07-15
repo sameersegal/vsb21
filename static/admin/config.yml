@@ -20,8 +20,8 @@ collections:
     folder: "content/blog"
     create: true
     delete: true
-    path: "{{slug}}/index"
-    # slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    path: "{{priority}}-{{slug}}/index"
+    # slug: "{{priority}}-{{slug}}"
     media_folder: "./"
     public_folder: "./"
     fields:
@@ -59,7 +59,7 @@ collections:
     folder: "content/blog/rta-journal"
     create: true
     delete: true
-    path: "{{slug}}/index"
+    path: "{{priority}}-{{slug}}/index"
     # slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     media_folder: "./"
     public_folder: "./"
@@ -76,7 +76,7 @@ collections:
     folder: "content/blog/musings-and-memories"
     create: true
     delete: true
-    path: "{{slug}}/index"
+    path: "{{priority}}-{{slug}}/index"
     # slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     media_folder: "./"
     public_folder: "./"
