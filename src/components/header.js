@@ -9,7 +9,7 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import Container from './container';
 
 const HeaderWrapper = styled.nav`
-  background: transparent;
+  background-color: white;
   position: fixed;
   width: 100%;
   top: 0;
@@ -43,7 +43,7 @@ const HeaderWrapper = styled.nav`
         height: 2.5rem;
         width: 3.5rem;
         position: relative;
-        background: transparent;
+        // background: transparent;
         padding: 0;
         border: none;
         div {
@@ -212,10 +212,16 @@ export default function Header({ location, links }) {
   function renderLinks() {
     return (
       <Fragment>
-        {links.map(({link, title, type})=> {
-          return (
-            <AnchorLink to={link} key={link}>{title}</AnchorLink>
-          )
+        {links.map(({link, title, type, divider})=> {
+          if(type === 'anchor') {
+            return (
+              <AnchorLink to={link} key={link} className={divider ? 'divider' : ''}>{title}</AnchorLink>
+            )
+          } else {
+            return (
+              <Link to={link} key={link} className={divider ? 'divider' : ''}>{title}</Link>
+            )
+          }          
         })}                
       </Fragment>
     );

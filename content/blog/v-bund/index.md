@@ -10,8 +10,7 @@ read_more: "Watch All"
 section: 'home'
 priority: 4
 ---
-<center>
-    <video poster="./Bund with water.png" autoplay loop playsinline muted width="600" height="400">
-        <source src="./Bund with water.mp4" type="video/mp4">
-    </video>
-</center>
+
+<video poster="./Bund with water.png" autoplay loop playsinline muted>
+    <source src="./Bund with water.mp4" type="video/mp4">
+</video>

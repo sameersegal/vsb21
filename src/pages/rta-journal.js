@@ -13,8 +13,10 @@ const RTAIndex = ({ data, location }) => {
   posts.forEach(({node: {frontmatter: {title}, fields: {slug}}}) => {
     const s = "/rta-journal/#" + slug.split("/")[2]
     links.push({'link':s, title, 'type': 'anchor'})
-  })
-  // links.push({'link':'/musings-and-memories', 'title': 'Musings & Memories'})
+  })  
+  links[links.length-1]['divider'] = true
+  links.push({'link':'/musings-and-memories', 'title': 'Musings & Memories'})
+  links.push({'link':'/mysore-pak-recipe', 'title': 'Mysore Pak'})
 
   return (
     <Layout location={location} title={siteTitle} links={links}>

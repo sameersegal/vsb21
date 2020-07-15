@@ -13,11 +13,10 @@ priority: 1000
 page_create: true
 ---
 
-<center>
-    <video poster="./Hubli and Jumpy.png" autoplay loop playsinline muted width="600" height="400">
-        <source src="./Hubli and Jumpy.mp4" type="video/mp4">
-    </video>
-</center>
+
+<video poster="./Hubli and Jumpy.png" autoplay loop playsinline muted>
+    <source src="./Hubli and Jumpy.mp4" type="video/mp4">
+</video>
 
 <!-- <br/>
 

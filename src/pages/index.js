@@ -10,6 +10,14 @@ import SEO from "../components/seo"
 
 const CArticle = styled.article`
   // width: 1400px;
+  margin: 20px 0;
+  section {
+    text-align: center;
+    video {
+      padding: 0px;
+      width: 590px;    
+    }
+  }  
 `
 const CSection = styled.section`
   // width: 100%;

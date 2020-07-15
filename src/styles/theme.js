@@ -17,6 +17,7 @@ const Theme = {
       redVert: 'linear-gradient(180deg, #EF412D, #4F2920)',
       black: 'linear-gradient(90deg, #000, #000)',
       blackRed: 'linear-gradient(90deg, #4F2920, #EF412D)',
+      green: 'linear-gradient(90deg, #47EF2D, #4F2920)',
     },
     effects: {
       boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.2)',
