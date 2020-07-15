@@ -15,10 +15,28 @@ const CArticle = styled.article`
     text-align: center;
     video {
       padding: 0px;
-      width: 590px;    
+      width: 590px;
+      // @media screen and (max-width: 800px) {
+      //   width: 200px;
+      // }    
+      @media screen and (min-width: 800px) {
+        width: 590px;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 800px;
+      }    
+      @media screen and (min-width: 1600px) {
+        width: 1200px;
+      }    
+      @media screen and (min-width: 1920px) {
+        width: 1600px;
+      }    
     }
   }  
 `
+
+// 200, 400, 800, 1200, 1600, 1920
+
 const CSection = styled.section`
   // width: 100%;
 `
