@@ -10,7 +10,7 @@ hero_video:
 read_more: "Watch All"
 section: 'home'
 priority: 26
-page_create: true
+page_create: false
 ---
 
 
