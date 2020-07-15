@@ -6,14 +6,14 @@ hero: "./intro/cover.png"
 type: "post"
 section: 'home'
 priority: 80
-read_more: "Read More"
+read_more: "Read More: Birthday Letters"
 page_create: false
 ---
 
 ![1](./intro/9.png)
 
 <center>
-    <a href="/rta-journal">Read More</a>
+    <h2><a href="/rta-journal">Read More: Birthday Letters</a></h2>
 </center>
 
 <!-- [Read More](/rta-journal) -->

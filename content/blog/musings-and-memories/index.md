@@ -6,7 +6,7 @@ hero: "./intro/1.png"
 section: 'home'
 type: "post"
 priority: 70
-read_more: "Read More"
+read_more: "Read More: Musings and Memories"
 page_create: false
 ---
 
@@ -14,5 +14,5 @@ page_create: false
 
 <!-- [Read More](/musings-and-memories) -->
 <center>
-    <a href="/musings-and-memories">Read More</a>
+    <h2><a href="/musings-and-memories">Read More: Musings and Memories</a></h2>
 </center>
