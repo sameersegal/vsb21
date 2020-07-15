@@ -4,7 +4,7 @@ date: 2020-07-12
 type: image_2_col
 hero: ./sketch.jpg
 section: home
-priority: 45
+priority: 6
 author: Chandan
 ---
 
