@@ -21,7 +21,7 @@ collections:
     create: true
     delete: true
     path: "{{slug}}/index"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    # slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     media_folder: "./"
     public_folder: "./"
     fields:
@@ -60,7 +60,7 @@ collections:
     create: true
     delete: true
     path: "{{slug}}/index"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    # slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     media_folder: "./"
     public_folder: "./"
     fields:
@@ -77,7 +77,7 @@ collections:
     create: true
     delete: true
     path: "{{slug}}/index"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    # slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     media_folder: "./"
     public_folder: "./"
     fields:
