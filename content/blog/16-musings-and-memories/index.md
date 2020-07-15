@@ -14,5 +14,5 @@ page_create: false
 
 <!-- [Read More](/musings-and-memories) -->
 <center>
-    <h2><a href="/musings-and-memories">Read More: Musings and Memories</a></h2>
+    <h3><a href="/musings-and-memories">Read More: Musings and Memories</a></h3>
 </center>

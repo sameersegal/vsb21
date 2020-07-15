@@ -13,7 +13,7 @@ page_create: false
 ![1](./intro/9.png)
 
 <center>
-    <h2><a href="/rta-journal">Read More: Birthday Letters</a></h2>
+    <h3><a href="/rta-journal">Read More: Birthday Letters</a></h3>
 </center>
 
 <!-- [Read More](/rta-journal) -->
