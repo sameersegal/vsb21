@@ -213,13 +213,13 @@ export default function Header({ location, links }) {
     return (
       <Fragment>
         {links.map(({link, title, type, divider})=> {
-          if(divider) {
+          if(type === 'anchor') {
             return (
-              <AnchorLink to={link} key={link} className='divider'>{title}</AnchorLink>
+              <AnchorLink to={link} key={link} className={divider ? 'divider' : ''}>{title}</AnchorLink>
             )
           } else {
             return (
-              <AnchorLink to={link} key={link}>{title}</AnchorLink>
+              <Link to={link} key={link} className={divider ? 'divider' : ''}>{title}</Link>
             )
           }          
         })}                
