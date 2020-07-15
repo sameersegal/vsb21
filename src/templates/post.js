@@ -16,9 +16,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   
   const links = []
-  links.push({'link':'/rta-journal', 'title': 'Birthday Letters'})
   links.push({'link':'/musings-and-memories', 'title': 'Musings & Memories'})
-  links.push({'link':'/mysore-pak/recipe', 'title': 'Mysore Pak'})
+  links.push({'link':'/rta-journal', 'title': 'Birthday Letters'})  
+  links.push({'link':'/mysore-pak-recipe', 'title': 'Mysore Pak'})
 
 
   return (
@@ -27,11 +27,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <Container2>
+      {/* <Container2> */}
         <article>        
           <section dangerouslySetInnerHTML={{ __html: post.html }} />        
         </article>      
-      </Container2>      
+      {/* </Container2>       */}
     </Layout>
   )
 }
