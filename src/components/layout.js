@@ -6,7 +6,7 @@ import GlobalFonts from '../styles/fonts';
 import Theme from '../styles/theme';
 
 import Header from './header';
-// import Footer from './Footer';
+import Footer from './footer';
 
 const SiteRoot = styled.div`
   background: white;
@@ -25,7 +25,7 @@ const Layout = ({ location, title, links, children }) => {
         <>
           <Header location={location} links={links} />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </>
       </ThemeProvider>      
     </SiteRoot>
