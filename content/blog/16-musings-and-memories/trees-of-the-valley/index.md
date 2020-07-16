@@ -1,12 +1,12 @@
 ---
-title: Closing
+title: Trees of the Valley
 date: "2015-05-06T23:46:37.121Z"
 description: ""
-hero: "./21.png"
+hero: "./16.png"
 section: 'musings-and-memories'
-priority: 80
+priority: 60
 ---
 
-![20](./20.png)
+![16](./16.png)
 
-![21](./21.png)
+![17](./17.png)
