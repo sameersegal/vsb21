@@ -13,4 +13,5 @@ priority: 190
 
 <video poster="./Guppies 2.png" autoplay loop playsinline muted>
     <source src="./Guppies 2.mp4" type="video/mp4">
+    <source src="./Guppies 2.webm" type="video/webm">
 </video>
