@@ -16,19 +16,22 @@ const CArticle = styled.article`
     video {
       padding: 0px;
       width: 590px;
-      // @media screen and (max-width: 800px) {
-      //   width: 200px;
-      // }    
-      @media screen and (min-width: 800px) {
+      @media screen and (max-width: 200px) {
+        width: 200px;
+      }    
+      @media screen and (max-width: 400px) {
+        width: 400px;
+      }    
+      @media screen and (max-width: 800px) {
         width: 590px;
       }
-      @media screen and (min-width: 1200px) {
-        width: 800px;
+      @media screen and (max-width: 1200px) {
+        width: 1000px;
       }    
-      @media screen and (min-width: 1600px) {
-        width: 1200px;
+      @media screen and (max-width: 1600px) {
+        width: 1400px;
       }    
-      @media screen and (min-width: 1920px) {
+      @media screen and (max-width: 1920px) {
         width: 1600px;
       }    
     }
@@ -51,7 +54,7 @@ const RTAIndex = ({ data, location }) => {
   //   links.push({'link':s, title, 'type': 'anchor'})
   // })
   links.push({'link':'/musings-and-memories', 'title': 'Musings & Memories'})
-  links.push({'link':'/rta-journal', 'title': 'Birthday Letters'})
+  links.push({'link':'/birthday-letters', 'title': 'Birthday Letters'})
   links.push({'link':'/mysore-pak-recipe', 'title': 'Mysore Pak'})
 
   return (

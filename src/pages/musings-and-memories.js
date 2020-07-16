@@ -26,7 +26,7 @@ const MAMIndex = ({ data, location }) => {
   })
   links.pop()
   links[links.length-1]['divider'] = true
-  links.push({'link':'/rta-journal', 'title': 'Birthday Letters'})  
+  links.push({'link':'/birthday-letters', 'title': 'Birthday Letters'})  
   links.push({'link':'/mysore-pak-recipe', 'title': 'Mysore Pak'})
 
   return (

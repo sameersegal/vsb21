@@ -13,13 +13,5 @@ page_create: false
 ![1](./intro/9.png)
 
 <center>
-    <h3><a href="/rta-journal">Read More: Birthday Letters</a></h3>
+    <h2><a href="/rta-journal" style="font-family: 'Playlist'">Read More: Birthday Letters</a></h2>
 </center>
-
-<!-- [Read More](/rta-journal) -->
-
-<!-- import Button from "../components/button"
-
-<Button link="/rta-journal" text="Read More" type="link">
-</Button>
- -->
