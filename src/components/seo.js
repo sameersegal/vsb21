@@ -18,6 +18,7 @@ const SEO = ({ description, lang, meta, title }) => {
           siteMetadata {
             title
             description
+            siteUrl
             social {
               twitter
             }
@@ -35,6 +36,7 @@ const SEO = ({ description, lang, meta, title }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaUrl = site.siteMetadata.siteUrl
   const imageURL = desktopImage.childImageSharp.fixed.src
 
   return (
@@ -60,6 +62,10 @@ const SEO = ({ description, lang, meta, title }) => {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:url`,
+          content: metaUrl
         },
         {
           property: `og:image`,
