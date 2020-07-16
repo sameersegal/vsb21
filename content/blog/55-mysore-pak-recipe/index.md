@@ -11,4 +11,4 @@ author: Janani
 page_create: true
 ---
 
-![Recipe](./2.png)
+![Recipe](./3.png)
