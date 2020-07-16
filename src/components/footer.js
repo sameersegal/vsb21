@@ -88,7 +88,7 @@ const Footer = () => {
       <Container>        
         <div className="copy">
           <span>
-            Made for The Valley School, with love and gratitude.
+            Made for the Valley School, with love and gratitude.
           </span>
           <br />
           <span>
