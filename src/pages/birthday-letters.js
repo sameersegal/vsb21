@@ -11,7 +11,7 @@ const RTAIndex = ({ data, location }) => {
   
   const links = []
   posts.forEach(({node: {frontmatter: {title}, fields: {slug}}}) => {
-    const s = "/rta-journal/#" + slug.split("/")[2]
+    const s = "/birthday-letters/#" + slug.split("/")[2]
     links.push({'link':s, title, 'type': 'anchor'})
   })  
   links[links.length-1]['divider'] = true
@@ -29,7 +29,7 @@ const RTAIndex = ({ data, location }) => {
         return (
           <article key={node.fields.slug} id={tag}>                        
             <section dangerouslySetInnerHTML={{ __html: node.html }} />
-            <hr/>      
+            {/* <hr/>       */}
           </article>
         )
       })}
