@@ -66,7 +66,7 @@ const RTAIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle} links={links}>
-      <SEO title="Home" />  
+      <SEO title="Glimpses" />  
       {/* <Container> */}
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
