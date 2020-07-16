@@ -250,7 +250,7 @@ export default function Header({ location, links }) {
           <StaticQuery
             query={graphql`
               query {
-                file(absolutePath: { regex: "/logo.jpg/" }) {
+                file(absolutePath: { regex: "/tvs-logosymbol.jpg/" }) {
                   childImageSharp {
                     fluid(maxWidth: 80) {
                       ...GatsbyImageSharpFluid_noBase64
