@@ -15,25 +15,32 @@ const CArticle = styled.article`
     text-align: center;
     video {
       padding: 0px;
-      width: 590px;
-      @media screen and (max-width: 200px) {
-        width: 200px;
-      }    
-      @media screen and (max-width: 400px) {
-        width: 400px;
-      }    
-      @media screen and (max-width: 800px) {
-        width: 590px;
+      // width: 80%;
+      @media screen and (min-width: 1600px) {
+        width: 80%;
       }
-      @media screen and (max-width: 1200px) {
-        width: 1000px;
-      }    
       @media screen and (max-width: 1600px) {
-        width: 1400px;
-      }    
-      @media screen and (max-width: 1920px) {
-        width: 1600px;
-      }    
+        width: 100%;
+      }
+      // width: 590px;
+      // @media screen and (max-width: 200px) {
+      //   width: 200px;
+      // }    
+      // @media screen and (max-width: 400px) {
+      //   width: 400px;
+      // }    
+      // @media screen and (max-width: 800px) {
+      //   width: 590px;
+      // }
+      // @media screen and (max-width: 1200px) {
+      //   width: 1000px;
+      // }    
+      // @media screen and (max-width: 1600px) {
+      //   width: 1400px;
+      // }    
+      // @media screen and (max-width: 1920px) {
+      //   width: 1600px;
+      // }    
     }
   }  
 `
