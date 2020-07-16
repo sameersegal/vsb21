@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Glimpses of the Valley`,    
-    description: `Valley's 42 Birthday. July 17th 2020`,
+    description: `Birthday Letters for the Valley School, with love and gratitude.`,
     siteUrl: `https://glimpses.thevalleyschool.info/`,
     social: {
       twitter: `thevalleyschool`,
