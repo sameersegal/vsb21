@@ -13,5 +13,5 @@ author: Janani
 ![Recipe](./10.png)
 
 <center>
-    <h3><a href="/mysore-pak-recipe" style="font-family: 'Playlist'">Recipe Here: Mysore Pak</a></h3>
+    <h3><a href="/55-mysore-pak-recipe" style="font-family: 'Playlist'">Recipe Here: Mysore Pak</a></h3>
 </center>
