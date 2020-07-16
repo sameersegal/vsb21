@@ -20,7 +20,7 @@ const RTAIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle} links={links}>
-      <SEO title="All posts" />      
+      <SEO title="Birthday Letters" />      
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         const isVideo = !!node.frontmatter.hero_video  

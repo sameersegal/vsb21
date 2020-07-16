@@ -31,7 +31,7 @@ const MAMIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle} links={links}>
-      <SEO title="All posts" />      
+      <SEO title="Musings and Memories" />      
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           const isVideo = !!node.frontmatter.hero_video
