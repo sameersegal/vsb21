@@ -13,5 +13,5 @@ page_create: false
 ![1](./intro/9.png)
 
 <center>
-    <h2><a href="/rta-journal" style="font-family: 'Playlist'">Read More: Birthday Letters</a></h2>
+    <h3><a href="/rta-journal" style="font-family: 'Playlist'">Read More: Birthday Letters</a></h3>
 </center>
